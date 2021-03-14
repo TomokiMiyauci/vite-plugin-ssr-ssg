@@ -2,7 +2,9 @@
   "name": "vite-plugin-ssr-ssg",
   "private": false,
   "main": "index.js",
-  "bin": "index.js",
+  "bin": {
+    "vite-ssr": "index.js"
+  },
   "version": "1.0.0-alpha.1",
   "license": "MIT",
   "repository": "https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg",
