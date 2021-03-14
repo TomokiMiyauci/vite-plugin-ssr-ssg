@@ -13,7 +13,8 @@
   "scripts": {
     "build": "rollup -c rollup.config.ts",
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
