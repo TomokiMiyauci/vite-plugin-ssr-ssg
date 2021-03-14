@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.4](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-03-14)
+
+## ✨ New Features
+- [`9fa9798`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/9fa9798)   Add core logic 
+
+
+
+# [1.0.0-alpha.4](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-03-14)
+
 # [v1.0.0-alpha.3](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-03-14)
 
 ## ✨ New Features
