@@ -2,6 +2,7 @@
   "name": "vite-plugin-ssr-ssg",
   "private": false,
   "main": "index.js",
+  "bin": "index.js",
   "license": "MIT",
   "repository": "https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg",
   "scripts": {
@@ -32,6 +33,7 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "index.js"
   ]
 }
