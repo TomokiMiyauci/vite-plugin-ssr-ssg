@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2021-03-14)
+
+## ✨ New Features
+- [`4776671`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/4776671)   Add server script 
+
+
+
+# [1.0.0-alpha.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2021-03-14)
+
 # v1.0.0-alpha.1 (2021-03-14)
 
 ## ✨ New Features
