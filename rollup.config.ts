@@ -4,6 +4,15 @@ import typescript from 'rollup-plugin-typescript2'
 
 import { bin } from './package.json'
 
+const shebang = () => {
+  return {
+    name: 'banner',
+    renderChunk(code) {
+      return '#!/usr/bin/env node\n' + code
+    }
+  }
+}
+
 const config = [
   {
     input: 'src/cli/ssr.ts',
@@ -24,7 +33,8 @@ const config = [
     },
     plugins: [
       // terser(),
-      typescript({ useTsconfigDeclarationDir: false })
+      typescript({ useTsconfigDeclarationDir: false }),
+      shebang()
       // sourceMaps()
     ]
   },
@@ -42,7 +52,8 @@ const config = [
     },
     plugins: [
       // terser(),
-      typescript({ useTsconfigDeclarationDir: false })
+      typescript({ useTsconfigDeclarationDir: false }),
+      shebang()
       // sourceMaps()
     ]
   }
