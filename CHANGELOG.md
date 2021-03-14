@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.6](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2021-03-14)
+
+## 🐛 Bug Fixes
+- [`ea91810`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ea91810)   Add shebang 
+
+
+
+# [1.0.0-alpha.6](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2021-03-14)
+
 # [v1.0.0-alpha.5](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2021-03-14)
 
 ## 🐛 Bug Fixes
