@@ -8,8 +8,7 @@
   "repository": "https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg",
   "scripts": {
     "commit": "cz",
-    "prepare": "husky install",
-    "prepublishOnly": "yarn build"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
