@@ -2,8 +2,8 @@ import { readFileSync } from 'fs'
 import { resolve as _resolve } from 'path'
 import { ViteDevServer } from 'vite'
 import express, { Express, RequestHandler } from 'express'
+import { isTest } from './constants'
 
-const isTest = process.env.NODE_ENV === 'test' || !!process.env.VITE_TEST_BUILD
 const resolve = (path: string): string => _resolve(__dirname, path)
 
 const getViteInstance = async <T extends boolean>(
@@ -12,7 +12,10 @@ const getViteInstance = async <T extends boolean>(
 ): Promise<ViteDevServer | undefined> => {
   if (isProd) return undefined
 
-  return await (await import('vite')).default.createServer({
+  const {
+    default: { createServer }
+  } = await import('vite')
+  return await createServer({
     root,
     logLevel: isTest ? 'error' : 'info',
     server: {
