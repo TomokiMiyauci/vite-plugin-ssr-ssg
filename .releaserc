@@ -1,5 +1,5 @@
 {
-  "branches": ["main", "next"],
+  "branches": ["main", "next", {"name": "alpha", "prerelease": true}],
   "plugins": [
     "semantic-release-gitmoji",
     "@semantic-release/release-notes-generator",
