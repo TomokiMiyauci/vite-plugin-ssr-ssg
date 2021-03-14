@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.5](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2021-03-14)
+
+## 🐛 Bug Fixes
+- [`06f95bc`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/06f95bc)   Fix scripts 
+
+
+
+# [1.0.0-alpha.5](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2021-03-14)
+
 # [v1.0.0-alpha.4](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-03-14)
 
 ## ✨ New Features
