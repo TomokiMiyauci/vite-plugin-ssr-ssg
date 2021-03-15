@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.10](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2021-03-15)
+
+## 🐛 Bug Fixes
+- [`fd33fe9`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/fd33fe9)   Change outDir 
+
+
+
+# [1.0.0-alpha.10](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2021-03-15)
+
 # [v1.0.0-alpha.9](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2021-03-15)
 
 ## 🐛 Bug Fixes
