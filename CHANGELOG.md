@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.8](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2021-03-15)
+
+## 🐛 Bug Fixes
+- [`5df8bea`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/5df8bea)   Change path 
+
+
+
+# [1.0.0-alpha.8](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2021-03-15)
+
 # [v1.0.0-alpha.7](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2021-03-15)
 
 ## 🐛 Bug Fixes
