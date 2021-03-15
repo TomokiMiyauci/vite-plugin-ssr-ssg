@@ -1,13 +1,13 @@
-import { readdirSync, writeFileSync, readFileSync } from 'fs'
+import { writeFileSync, readFileSync } from 'fs'
 import { resolve, join } from 'path'
 
 const toAbsolute = (path: string): string => resolve(__dirname, '..', path)
-const routesToPrerender = readdirSync(toAbsolute(join('src', 'pages'))).map(
-  (file) => {
-    const name = file.replace(/\.(jsx|tsx)$/, '').toLowerCase()
-    return name === 'index' ? '/' : `/${name}`
-  }
-)
+// const routesToPrerender = readdirSync(toAbsolute(join('src', 'pages'))).map(
+//   (file) => {
+//     const name = file.replace(/\.(jsx|tsx)$/, '').toLowerCase()
+//     return name === 'index' ? '/' : `/${name}`
+//   }
+// )
 const run = async () => {
   const { render } = require('../dist/server/entry-server')
   const template = readFileSync(
@@ -15,7 +15,9 @@ const run = async () => {
     'utf-8'
   )
 
-  routesToPrerender.forEach(async (url) => {
+  const pages = ['/']
+
+  pages.forEach(async (url) => {
     const appHtml = await render(url, {})
     const html = template.replace(`<!--app-html-->`, appHtml)
     const filePath = `dist/static${url === '/' ? '/index' : url}.html`
