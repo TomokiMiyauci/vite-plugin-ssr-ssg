@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.14](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2021-03-15)
+
+## ✨ New Features
+- [`cb2607d`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/cb2607d)  (react) Add react routes 
+
+
+
+# [1.0.0-alpha.14](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2021-03-15)
+
 # [v1.0.0-alpha.13](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2021-03-15)
 
 ## ✨ New Features
