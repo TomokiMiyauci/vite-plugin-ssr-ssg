@@ -8,6 +8,7 @@ import { toRootAbsolute } from './utils'
 //   }
 // )
 const run = async () => {
+  console.log(1, process.env.PWD)
   const { render } = require(toRootAbsolute('dist', 'server', 'entry-server'))
   const template = readFileSync(
     toRootAbsolute('dist', 'static', 'index.html'),
