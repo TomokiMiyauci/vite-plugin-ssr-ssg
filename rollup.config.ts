@@ -6,7 +6,7 @@ import { bin } from './package.json'
 
 const shebang = () => {
   return {
-    name: 'banner',
+    name: 'shebang',
     renderChunk(code) {
       return '#!/usr/bin/env node\n' + code
     }
@@ -56,6 +56,20 @@ const config = [
       shebang()
       // sourceMaps()
     ]
+  },
+  {
+    input: 'src/entry-server.tsx',
+    output: [
+      {
+        file: 'dist/entry-server.js',
+        format: 'cjs',
+        sourcemap: true
+      }
+    ],
+    watch: {
+      include: 'src/**'
+    },
+    plugins: [typescript({ useTsconfigDeclarationDir: false })]
   }
 ]
 

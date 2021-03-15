@@ -4,7 +4,7 @@ import { resolve, join } from 'path'
 export const run = async () => {
   await build({
     build: {
-      ssr: resolve(__dirname, 'entry-server.tsx'),
+      ssr: resolve(__dirname, 'entry-server'),
       outDir: join('dist', 'server')
     },
 
