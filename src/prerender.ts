@@ -1,12 +1,7 @@
 import { writeFileSync, readFileSync } from 'fs'
-import { toRootAbsolute } from './utils'
+import { toRootAbsolute, getRoutePaths } from './utils'
 import { join } from 'path'
-// const routesToPrerender = readdirSync(toAbsolute(join('src', 'pages'))).map(
-//   (file) => {
-//     const name = file.replace(/\.(jsx|tsx)$/, '').toLowerCase()
-//     return name === 'index' ? '/' : `/${name}`
-//   }
-// )
+
 interface Options {
   outDir?: string
   outDirClient?: string
@@ -27,7 +22,7 @@ const run = async (options?: Options) => {
     'utf-8'
   )
 
-  const pages = ['/']
+  const pages = getRoutePaths()
 
   pages.forEach(async (url) => {
     const appHtml = await render(url, {})
