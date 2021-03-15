@@ -1,8 +1,6 @@
-// import sourceMaps from 'rollup-plugin-sourcemaps'
-// import { terser } from 'rollup-plugin-terser'
 import typescript from 'rollup-plugin-typescript2'
 
-import { bin } from './package.json'
+import { bin, main, module } from './package.json'
 
 const shebang = () => {
   return {
@@ -54,7 +52,6 @@ const config = [
       // terser(),
       typescript({ useTsconfigDeclarationDir: false }),
       shebang()
-      // sourceMaps()
     ]
   },
   {
@@ -69,6 +66,26 @@ const config = [
     watch: {
       include: 'src/**'
     },
+    plugins: [typescript({ useTsconfigDeclarationDir: false })]
+  },
+  {
+    input: 'src/index.ts',
+    output: [
+      {
+        file: main,
+        format: 'cjs',
+        sourcemap: true
+      },
+      {
+        file: module,
+        format: 'es',
+        sourcemap: true
+      }
+    ],
+    watch: {
+      include: 'src/**'
+    },
+
     plugins: [typescript({ useTsconfigDeclarationDir: false })]
   }
 ]
