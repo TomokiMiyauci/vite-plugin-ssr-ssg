@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.13](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2021-03-15)
+
+## ✨ New Features
+- [`56fe571`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/56fe571)   Add detect routing path 
+
+
+
+# [1.0.0-alpha.13](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2021-03-15)
+
 # [v1.0.0-alpha.12](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2021-03-15)
 
 ## ✨ New Features
