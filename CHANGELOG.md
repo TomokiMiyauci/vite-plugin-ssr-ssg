@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.11](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2021-03-15)
+
+## 🐛 Bug Fixes
+- [`6d9928e`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/6d9928e)   Change path to pwd 
+
+
+
+# [1.0.0-alpha.11](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2021-03-15)
+
 # [v1.0.0-alpha.10](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2021-03-15)
 
 ## 🐛 Bug Fixes
