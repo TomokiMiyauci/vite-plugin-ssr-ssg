@@ -4,7 +4,10 @@ import { join } from 'path'
 
 const run = async (): Promise<void> => {
   await Promise.all(
-    [clientBuildRun(join('dist', 'client')), serverBuildRun].map((fn) => fn())
+    [
+      clientBuildRun(join('dist', 'client')),
+      serverBuildRun(join('dist', 'server'))
+    ].map((fn) => fn())
   )
 }
 

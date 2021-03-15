@@ -1,12 +1,11 @@
 import { build } from 'vite'
 import { resolve } from 'path'
-import { toRootAbsolute } from './utils'
 
-export const run = async () => {
+export const run = (outDir: string) => async (): Promise<void> => {
   await build({
     build: {
       ssr: resolve(__dirname, 'entry-server'),
-      outDir: toRootAbsolute('dist', 'server')
+      outDir
     },
 
     esbuild: {
