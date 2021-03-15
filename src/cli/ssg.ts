@@ -1,18 +1,12 @@
-import { run as clientBuildRun } from '../build-client'
-import { run as serverBuildRun } from '../build-server'
-import { run as prerenderRun } from '../prerender'
+import { runSSG } from '../runner'
 
-import { join } from 'path'
+import yargs from 'yargs/yargs'
+const { hideBin } = require('yargs/helpers')
 
-const run = async (): Promise<void> => {
-  await Promise.all(
-    [
-      clientBuildRun(join('dist', 'static')),
-      serverBuildRun(join('dist', 'server'))
-    ].map((fn) => fn())
-  )
+const argv = yargs(hideBin(process.argv)).argv
 
-  await prerenderRun()
-}
-
-run()
+runSSG({
+  outDirClient: argv.outDirClient as string | undefined,
+  outDirServer: argv.outDirServer as string | undefined,
+  ...argv
+})
