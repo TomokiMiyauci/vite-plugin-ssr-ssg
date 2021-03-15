@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.9](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2021-03-15)
+
+## 🐛 Bug Fixes
+- [`877182a`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/877182a)   Use app root path 
+
+
+
+# [1.0.0-alpha.9](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2021-03-15)
+
 # [v1.0.0-alpha.8](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2021-03-15)
 
 ## 🐛 Bug Fixes

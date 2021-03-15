@@ -7,7 +7,7 @@
     "vite-ssg": "dist/vite-ssg.js",
     "vite-ssr": "dist/vite-ssr.js"
   },
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "license": "MIT",
   "repository": "https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg",
   "scripts": {
