@@ -1,7 +1,6 @@
 import { writeFileSync, readFileSync } from 'fs'
-import { resolve, join } from 'path'
+import { toRootAbsolute } from './utils'
 
-const toAbsolute = (path: string): string => resolve(__dirname, '..', path)
 // const routesToPrerender = readdirSync(toAbsolute(join('src', 'pages'))).map(
 //   (file) => {
 //     const name = file.replace(/\.(jsx|tsx)$/, '').toLowerCase()
@@ -9,9 +8,9 @@ const toAbsolute = (path: string): string => resolve(__dirname, '..', path)
 //   }
 // )
 const run = async () => {
-  const { render } = require('../dist/server/entry-server')
+  const { render } = require(toRootAbsolute('dist', 'server', 'entry-server'))
   const template = readFileSync(
-    toAbsolute(join('dist', 'static', 'index.html')),
+    toRootAbsolute('dist', 'static', 'index.html'),
     'utf-8'
   )
 
@@ -21,7 +20,7 @@ const run = async () => {
     const appHtml = await render(url, {})
     const html = template.replace(`<!--app-html-->`, appHtml)
     const filePath = `dist/static${url === '/' ? '/index' : url}.html`
-    writeFileSync(toAbsolute(filePath), html)
+    writeFileSync(toRootAbsolute(filePath), html)
     console.log('pre-rendered:', filePath)
   })
 }
