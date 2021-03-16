@@ -1,1 +1,1 @@
-export { routes } from './react'
+export { getRoutes } from './react'
