@@ -1,5 +1,6 @@
 {
   "name": "vite-plugin-ssr-ssg",
+  "description": "Vite plugin for SSR and SSG",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -12,6 +13,11 @@
   "version": "1.0.0-alpha.19",
   "license": "MIT",
   "repository": "https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg",
+  "bugs": {
+    "url": "https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/issues"
+  },
+  "homepage": "https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg#readme",
+  "author": "TomokiMiyauci <development.operation.6.6.6@gmail.com>",
   "scripts": {
     "build": "rollup -c rollup.config.ts",
     "commit": "cz",
@@ -60,5 +66,14 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "ssr",
+    "ssg",
+    "vue",
+    "react",
+    "preact"
   ]
 }
