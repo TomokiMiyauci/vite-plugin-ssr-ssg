@@ -21,19 +21,19 @@ const getViteInstance = async <T extends boolean>(
 
 const handler = (
   isProd: boolean,
-  vite: ViteDevServer,
+  vite: ViteDevServer | undefined,
   index: string
 ): RequestHandler => async ({ originalUrl }, res) => {
   try {
     const template = isProd
       ? index
-      : await vite.transformIndexHtml(
+      : await vite?.transformIndexHtml(
           originalUrl,
           readFileSync(toRootAbsolute('index.html'), 'utf-8')
         )
     const render = isProd
       ? (await import(toRootAbsolute('dist', 'server', 'entry-server'))).render
-      : (await vite.ssrLoadModule('/src/entry-server.tsx')).render
+      : (await vite?.ssrLoadModule('/src/entry-server.tsx'))?.render
 
     const context = {} as { url: string }
     const appHtml = render(originalUrl, context)
@@ -43,11 +43,11 @@ const handler = (
       return res.redirect(301, context.url)
     }
 
-    const html = template.replace(`<!--app-html-->`, appHtml)
+    const html = template?.replace(`<!--app-html-->`, appHtml) ?? ''
 
     res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
   } catch (e) {
-    !isProd && vite.ssrFixStacktrace(e)
+    !isProd && vite?.ssrFixStacktrace(e)
     console.log(e.stack)
     res.status(500).end(e.stack)
   }
@@ -58,7 +58,7 @@ const createServer = async (
   isProd = process.env.NODE_ENV === 'production'
 ): Promise<{
   app: Express
-  vite: ViteDevServer
+  vite: ViteDevServer | undefined
 }> => {
   const indexProd = isProd
     ? readFileSync(toRootAbsolute('dist', 'client', 'index.html'), 'utf-8')
@@ -67,7 +67,7 @@ const createServer = async (
   const app = express()
   const vite = await getViteInstance(isProd, root)
 
-  if (!isProd) {
+  if (!isProd && vite) {
     app.use(vite.middlewares)
   } else {
     app.use(await (await import('compression')).default())
