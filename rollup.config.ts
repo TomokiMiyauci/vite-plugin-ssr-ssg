@@ -139,10 +139,16 @@ const config = [
       }
     ],
     watch: {
-      include: 'src/**'
+      include: 'src/react/*'
     },
 
-    plugins: [typescript({ useTsconfigDeclarationDir: false })]
+    plugins: [
+      typescript({
+        tsconfigOverride: {
+          include: ['src/react/*']
+        }
+      })
+    ]
   }
 ]
 
