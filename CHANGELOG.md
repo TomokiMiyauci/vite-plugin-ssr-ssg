@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.23](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.22...v1.0.0-alpha.23) (2021-03-16)
+
+## ✨ New Features
+- [`68335c6`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/68335c6)  (react) Add script for react 
+
+
+
+# [1.0.0-alpha.23](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.22...v1.0.0-alpha.23) (2021-03-16)
+
 # [v1.0.0-alpha.22](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.21...v1.0.0-alpha.22) (2021-03-16)
 
 ## ✨ New Features
