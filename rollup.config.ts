@@ -73,6 +73,24 @@ const config = [
     ]
   },
   {
+    input: 'src/cli/preview.ts',
+    output: [
+      {
+        file: bin['vite-preview'],
+        format: 'cjs',
+        sourcemap: true
+      }
+    ],
+    watch: {
+      include: 'src/**'
+    },
+    plugins: [
+      // terser(),
+      typescript({ useTsconfigDeclarationDir: false }),
+      shebang()
+    ]
+  },
+  {
     input: 'src/entry-server.tsx',
     output: [
       {

@@ -8,7 +8,8 @@
   "bin": {
     "vite-dev": "dist/vite-dev.js",
     "vite-ssg": "dist/vite-ssg.js",
-    "vite-ssr": "dist/vite-ssr.js"
+    "vite-ssr": "dist/vite-ssr.js",
+    "vite-preview": "dist/vite-preview.js"
   },
   "version": "1.0.0-alpha.21",
   "license": "MIT",

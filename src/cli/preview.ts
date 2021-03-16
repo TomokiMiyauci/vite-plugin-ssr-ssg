@@ -40,7 +40,7 @@ const handler = (
 
 const createServer = async (
   root = process.cwd(),
-  isProd = process.env.NODE_ENV === 'production'
+  isProd = true
 ): Promise<{
   app: Express
   vite: ViteDevServer | undefined
@@ -72,8 +72,8 @@ const createServer = async (
 }
 
 createServer().then(({ app }) =>
-  app.listen(3000, () => {
-    console.log('http://localhost:3000')
+  app.listen(5000, () => {
+    console.log('http://localhost:5000')
   })
 )
 
