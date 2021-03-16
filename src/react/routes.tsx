@@ -1,4 +1,4 @@
-import { lazy, Suspense, ComponentType } from 'react'
+import { lazy, ComponentType } from 'react'
 
 const pages = import.meta.glob('../../src/pages/*.tsx')
 const routes = Object.keys(pages)
@@ -17,11 +17,7 @@ const routes = Object.keys(pages)
       name,
       path: name === 'Index' ? '/' : `/${name?.toLowerCase()}`,
 
-      Component: () => (
-        <Suspense fallback={<></>}>
-          <Page />
-        </Suspense>
-      )
+      Component: Page
     }
   })
 
