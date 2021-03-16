@@ -1,15 +1,11 @@
 import { build } from 'vite'
-import { resolve } from 'path'
+import { toRootAbsolute } from './utils'
 
 export const run = (outDir: string) => async (): Promise<void> => {
   await build({
     build: {
-      ssr: resolve(__dirname, 'entry-server'),
+      ssr: toRootAbsolute('src', 'entry-server'),
       outDir
-    },
-
-    esbuild: {
-      jsxInject: `import React from 'react'`
     }
   })
 }

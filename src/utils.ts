@@ -9,7 +9,6 @@ const extensions = new RegExp(`.(${PIPED_EXTENSIONS})$`)
 
 const getPath = (fileName: string): string => {
   const name = fileName.replace(extensions, '').toLowerCase()
-  console.log(fileName, name)
   return name === 'index' ? '/' : `/${name}`
 }
 

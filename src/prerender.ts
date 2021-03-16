@@ -26,6 +26,7 @@ const run = async (options?: Options) => {
 
   pages.forEach(async (url) => {
     const appHtml = await render(url, {})
+    console.log(1, appHtml, url)
     const html = template.replace(`<!--app-html-->`, appHtml)
     const filePath = join(
       options?.outDir || 'dist',
