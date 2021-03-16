@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.16](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.15...v1.0.0-alpha.16) (2021-03-16)
+
+## 🐛 Bug Fixes
+- [`3ed8b2a`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/3ed8b2a)   Remove Suspense 
+
+
+
+# [1.0.0-alpha.16](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.15...v1.0.0-alpha.16) (2021-03-16)
+
 # [v1.0.0-alpha.15](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2021-03-16)
 
 ## ✨ New Features
