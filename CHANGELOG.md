@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.24](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.23...v1.0.0-alpha.24) (2021-03-16)
+
+## 🐛 Bug Fixes
+- [`9fbd450`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/9fbd450)  (react) Fix output options 
+
+
+
+# [1.0.0-alpha.24](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.23...v1.0.0-alpha.24) (2021-03-16)
+
 # [v1.0.0-alpha.23](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.22...v1.0.0-alpha.23) (2021-03-16)
 
 ## ✨ New Features
