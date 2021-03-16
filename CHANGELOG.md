@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.15](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2021-03-16)
+
+## ✨ New Features
+- [`a546023`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/a546023)   Add auto detect routes from pages file 
+
+
+
+# [1.0.0-alpha.15](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2021-03-16)
+
 # [v1.0.0-alpha.14](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2021-03-15)
 
 ## ✨ New Features
