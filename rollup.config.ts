@@ -55,6 +55,24 @@ const config = [
     ]
   },
   {
+    input: 'src/cli/dev.ts',
+    output: [
+      {
+        file: bin['vite-dev'],
+        format: 'cjs',
+        sourcemap: true
+      }
+    ],
+    watch: {
+      include: 'src/**'
+    },
+    plugins: [
+      // terser(),
+      typescript({ useTsconfigDeclarationDir: false }),
+      shebang()
+    ]
+  },
+  {
     input: 'src/entry-server.tsx',
     output: [
       {
