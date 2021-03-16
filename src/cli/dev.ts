@@ -10,7 +10,7 @@ const getViteInstance = async <T extends boolean>(
 ): Promise<ViteDevServer | undefined> => {
   if (isProd) return undefined
 
-  return await (await import('vite')).default.createServer({
+  return await (await import('vite')).createServer({
     root,
     logLevel: isTest ? 'error' : 'info',
     server: {
@@ -33,7 +33,8 @@ const handler = (
         )
     const render = isProd
       ? (await import(toRootAbsolute('dist', 'server', 'entry-server'))).render
-      : (await vite?.ssrLoadModule('/src/entry-server.tsx'))?.render
+      : (await vite?.ssrLoadModule(toRootAbsolute('src', 'entry-server.tsx')))
+          ?.render
 
     const context = {} as { url: string }
     const appHtml = render(originalUrl, context)
