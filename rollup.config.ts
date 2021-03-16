@@ -123,6 +123,26 @@ const config = [
     },
 
     plugins: [typescript({ useTsconfigDeclarationDir: false })]
+  },
+  {
+    input: 'src/react/index.ts',
+    output: [
+      {
+        file: 'react/index.js',
+        format: 'cjs',
+        sourcemap: true
+      },
+      {
+        file: 'react/index.esm.js',
+        format: 'es',
+        sourcemap: true
+      }
+    ],
+    watch: {
+      include: 'src/**'
+    },
+
+    plugins: [typescript({ useTsconfigDeclarationDir: false })]
   }
 ]
 

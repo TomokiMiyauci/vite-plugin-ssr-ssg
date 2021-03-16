@@ -3,3 +3,4 @@ export const isTest =
 export const ROOT_PATH = require('app-root-path').path
 export const EXTENSIONS = ['jsx', 'tsx', 'ts', 'js', 'vue'] as const
 export const PIPED_EXTENSIONS = EXTENSIONS.join('|')
+export const NAME = 'vite:ssr-ssg'
