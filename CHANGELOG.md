@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.27](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.26...v1.0.0-alpha.27) (2021-03-17)
+
+## 🐛 Bug Fixes
+- [`45d7d54`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/45d7d54)  (react) Remove unused 
+
+
+
+# [1.0.0-alpha.27](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.26...v1.0.0-alpha.27) (2021-03-17)
+
 # [v1.0.0-alpha.26](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.25...v1.0.0-alpha.26) (2021-03-17)
 
 ## 🐛 Bug Fixes
