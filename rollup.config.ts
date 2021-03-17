@@ -149,6 +149,32 @@ const config = [
         }
       })
     ]
+  },
+  {
+    input: 'src/preact/index.ts',
+    output: [
+      {
+        file: 'preact/index.js',
+        format: 'cjs',
+        sourcemap: true
+      },
+      {
+        file: 'preact/index.esm.js',
+        format: 'es',
+        sourcemap: true
+      }
+    ],
+    watch: {
+      include: 'src/preact/*'
+    },
+
+    plugins: [
+      typescript({
+        tsconfigOverride: {
+          include: ['src/preact/*']
+        }
+      })
+    ]
   }
 ]
 
