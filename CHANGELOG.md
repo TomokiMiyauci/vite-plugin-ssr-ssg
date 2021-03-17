@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.28](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.27...v1.0.0-alpha.28) (2021-03-17)
+
+## ✨ New Features
+- [`8f0183d`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/8f0183d)  (preact) Add preact helper 
+
+
+
+# [1.0.0-alpha.28](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.27...v1.0.0-alpha.28) (2021-03-17)
+
 # [v1.0.0-alpha.27](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.26...v1.0.0-alpha.27) (2021-03-17)
 
 ## 🐛 Bug Fixes
