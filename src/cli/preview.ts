@@ -21,7 +21,7 @@ const handler = (
           ?.render
 
     const context = {} as { url: string }
-    const appHtml = render(originalUrl, context)
+    const appHtml = await render(originalUrl, context)
 
     if (context.url) {
       // Somewhere a `<Redirect>` was rendered
