@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.33](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2021-03-17)
+
+## ✨ New Features
+- [`331d517`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/331d517)  (preact) Add SSR and SSG commands 
+
+
+
+# [1.0.0-alpha.33](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2021-03-17)
+
 # [v1.0.0-alpha.32](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2021-03-17)
 
 ## 🐛 Bug Fixes
