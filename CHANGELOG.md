@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.31](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2021-03-17)
+
+## 🐛 Bug Fixes
+- [`418b6e9`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/418b6e9)  (react) Import sync 
+
+
+
+# [1.0.0-alpha.31](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2021-03-17)
+
 # [v1.0.0-alpha.30](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.29...v1.0.0-alpha.30) (2021-03-17)
 
 ## 🐛 Bug Fixes
