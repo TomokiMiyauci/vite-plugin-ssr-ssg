@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.29](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.28...v1.0.0-alpha.29) (2021-03-17)
+
+## 🐛 Bug Fixes
+- [`d2152fa`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/d2152fa)  (preact) Include preact 
+
+
+
+# [1.0.0-alpha.29](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.28...v1.0.0-alpha.29) (2021-03-17)
+
 # [v1.0.0-alpha.28](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.27...v1.0.0-alpha.28) (2021-03-17)
 
 ## ✨ New Features
