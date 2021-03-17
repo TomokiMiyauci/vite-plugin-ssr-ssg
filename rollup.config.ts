@@ -91,20 +91,6 @@ const config = [
     ]
   },
   {
-    input: 'src/entry-server.tsx',
-    output: [
-      {
-        file: 'dist/entry-server.js',
-        format: 'cjs',
-        sourcemap: true
-      }
-    ],
-    watch: {
-      include: 'src/**'
-    },
-    plugins: [typescript({ useTsconfigDeclarationDir: false })]
-  },
-  {
     input: 'src/index.ts',
     output: [
       {
