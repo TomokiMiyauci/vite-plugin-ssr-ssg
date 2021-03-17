@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.32](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2021-03-17)
+
+## 🐛 Bug Fixes
+- [`ee5b9ae`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ee5b9ae)   Add await 
+
+
+
+# [1.0.0-alpha.32](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2021-03-17)
+
 # [v1.0.0-alpha.31](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2021-03-17)
 
 ## 🐛 Bug Fixes
