@@ -1,9 +1,9 @@
-import React, { FC, Suspense } from 'react'
+import React, { FC } from 'react'
 import './App.css'
 import { Route, Switch, Link } from 'react-router-dom'
 import { getRoutes } from 'vite-plugin-ssr-ssg/react'
 
-const pages = import.meta.glob('./pages/*.tsx')
+const pages = import.meta.globEager('./pages/*.tsx')
 const routes = getRoutes(pages)
 
 const App: FC = () => {
@@ -12,16 +12,10 @@ const App: FC = () => {
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Switch>
-        {routes.map((route) => {
+        {routes.map(({ path, name, Component }) => {
           return (
-            <Route exact path={route.path} key={route.name}>
-              {import.meta.env.SSR ? (
-                <route.Component />
-              ) : (
-                <Suspense fallback={null}>
-                  <route.Component />
-                </Suspense>
-              )}
+            <Route exact path={path} key={name}>
+              <Component />
             </Route>
           )
         })}
