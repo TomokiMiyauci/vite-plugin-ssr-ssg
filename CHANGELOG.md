@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.26](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.25...v1.0.0-alpha.26) (2021-03-17)
+
+## 🐛 Bug Fixes
+- [`c9912aa`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/c9912aa)  (react) Change getRoutes interface 
+
+
+
+# [1.0.0-alpha.26](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.25...v1.0.0-alpha.26) (2021-03-17)
+
 # [v1.0.0-alpha.25](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.24...v1.0.0-alpha.25) (2021-03-17)
 
 ## ✨ New Features
