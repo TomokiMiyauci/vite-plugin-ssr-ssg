@@ -4,6 +4,8 @@
   "description": "vite-plugin-ssr-ssg sample for react project",
   "private": false,
   "scripts": {
+    "cz": "yarn --cwd ../.. commit",
+    "commit": "yarn --cwd ../.. commit",
     "dev": "vite-dev",
     "build": "vite-ssr",
     "generate": "vite-ssg",
