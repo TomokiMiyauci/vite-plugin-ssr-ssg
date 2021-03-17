@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.30](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.29...v1.0.0-alpha.30) (2021-03-17)
+
+## 🐛 Bug Fixes
+- [`a7020cf`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/a7020cf)   Upgrade module 
+
+
+
+# [1.0.0-alpha.30](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.29...v1.0.0-alpha.30) (2021-03-17)
+
 # [v1.0.0-alpha.29](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.28...v1.0.0-alpha.29) (2021-03-17)
 
 ## 🐛 Bug Fixes
