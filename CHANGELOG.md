@@ -1,3 +1,15 @@
+# [v1.0.0-alpha.34](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2021-03-18)
+
+## ✨ New Features
+- [`8104d86`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/8104d86)  (vue3) Add helper for vue3 
+
+## 🐛 Bug Fixes
+- [`409d77c`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/409d77c)   Remove extension 
+
+
+
+# [1.0.0-alpha.34](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2021-03-18)
+
 # [v1.0.0-alpha.33](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2021-03-17)
 
 ## ✨ New Features
