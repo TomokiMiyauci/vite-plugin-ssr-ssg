@@ -9,12 +9,12 @@ interface Options {
 }
 const run = async (options?: Options) => {
   const { render } = require(toRootAbsolute(
-    options?.outDir || 'dist',
-    options?.outDirServer || 'server',
+    options?.outDir ?? 'dist',
+    options?.outDirServer ?? 'server',
     'entry-server'
   ))
   const template = readFileSync(
-    toRootAbsolute(options?.outDir || 'dist', 'index.html'),
+    toRootAbsolute(options?.outDir ?? 'dist', 'index.html'),
     'utf-8'
   )
 
@@ -25,8 +25,8 @@ const run = async (options?: Options) => {
     console.log(1, appHtml, url)
     const html = template.replace(`<!--app-html-->`, appHtml)
     const filePath = join(
-      options?.outDir || 'dist',
-      options?.outDirClient || '',
+      options?.outDir ?? 'dist',
+      options?.outDirClient ?? '',
       `${url === '/' ? 'index' : url}.html`
     )
     writeFileSync(toRootAbsolute(filePath), html)
