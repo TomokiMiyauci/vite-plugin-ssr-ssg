@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.38](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2021-03-18)
+
+## ✨ New Features
+- [`7494b0b`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/7494b0b)   Remove dist when script is starting 
+
+
+
+# [1.0.0-alpha.38](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2021-03-18)
+
 # [v1.0.0-alpha.37](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2021-03-18)
 
 ## ✨ New Features

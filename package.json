@@ -12,7 +12,7 @@
     "vite-ssr": "dist/vite-ssr.js",
     "vite-preview": "dist/vite-preview.js"
   },
-  "version": "1.0.0-alpha.37",
+  "version": "1.0.0-alpha.38",
   "license": "MIT",
   "repository": "https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg",
   "bugs": {
