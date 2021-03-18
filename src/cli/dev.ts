@@ -17,7 +17,7 @@ const handler = (
         )
     const render = isProd
       ? (await import(toRootAbsolute('dist', 'server', 'entry-server'))).render
-      : (await vite?.ssrLoadModule(toRootAbsolute('src', 'entry-server.tsx')))
+      : (await vite?.ssrLoadModule(toRootAbsolute('src', 'entry-server')))
           ?.render
 
     const context = {} as { url: string }
