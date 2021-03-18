@@ -5,6 +5,6 @@ export { getRoutes } from './routes'
 type ServerRenderer = (
   url: string,
   context: SSRContext
-) => typeof renderToString
+) => ReturnType<typeof renderToString>
 
 export type { ServerRenderer }
