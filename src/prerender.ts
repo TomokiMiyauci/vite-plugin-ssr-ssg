@@ -14,11 +14,7 @@ const run = async (options?: Options) => {
     'entry-server'
   ))
   const template = readFileSync(
-    toRootAbsolute(
-      options?.outDir || 'dist',
-      options?.outDirClient || 'static',
-      'index.html'
-    ),
+    toRootAbsolute(options?.outDir || 'dist', 'index.html'),
     'utf-8'
   )
 

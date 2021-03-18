@@ -15,22 +15,11 @@ type SSROptions = UserConfig & Partial<CustomOptions>
 type SSGOptions = SSROptions
 
 const runSSG = async (options?: SSGOptions): Promise<void> => {
-  const outDir = options?.build?.outDir || 'dist'
-  rmSync(outDir, {
-    recursive: true,
-    force: true
-  })
-  await Promise.all(
-    [
-      clientBuildRun(join(outDir, options?.outDirClient || 'static')),
-      serverBuildRun(join(outDir, options?.outDirServer || 'server'))
-    ].map((fn) => fn())
-  )
-
+  await runSSR({ ...options, outDirClient: '' })
   await prerenderRun(options)
 }
 
-const runSSR = async (options: SSROptions): Promise<void> => {
+const runSSR = async (options?: SSROptions): Promise<void> => {
   const outDir = options?.build?.outDir || 'dist'
   rmSync(outDir, {
     recursive: true,
