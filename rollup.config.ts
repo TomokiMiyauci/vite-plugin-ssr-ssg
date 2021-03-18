@@ -161,6 +161,32 @@ const config = [
         }
       })
     ]
+  },
+  {
+    input: 'src/vue3/index.ts',
+    output: [
+      {
+        file: 'vue3/index.js',
+        format: 'cjs',
+        sourcemap: true
+      },
+      {
+        file: 'vue3/index.esm.js',
+        format: 'es',
+        sourcemap: true
+      }
+    ],
+    watch: {
+      include: 'src/vue3/*'
+    },
+
+    plugins: [
+      typescript({
+        tsconfigOverride: {
+          include: ['src/vue3/*']
+        }
+      })
+    ]
   }
 ]
 
