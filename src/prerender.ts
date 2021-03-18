@@ -30,7 +30,7 @@ const run = async (options?: Options) => {
     const html = template.replace(`<!--app-html-->`, appHtml)
     const filePath = join(
       options?.outDir || 'dist',
-      options?.outDirClient || 'static',
+      options?.outDirClient || '',
       `${url === '/' ? 'index' : url}.html`
     )
     writeFileSync(toRootAbsolute(filePath), html)
