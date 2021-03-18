@@ -99,6 +99,14 @@
     "@vue/shared" "3.0.7"
     csstype "^2.6.8"
 
+"@vue/server-renderer@^3.0.7":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@vue/server-renderer/-/server-renderer-3.0.7.tgz#780818db804b249cc2a284bb44902b9fda5e5d2b"
+  integrity sha512-3idEbDTQ0GSPgGTiM9Ml4IwPOityotTRUyrDttAyFoSz6DI1RvE1QR0nSQR7TMgMDXwbO22gf+nMYVkj7c9VRg==
+  dependencies:
+    "@vue/compiler-ssr" "3.0.7"
+    "@vue/shared" "3.0.7"
+
 "@vue/shared@3.0.7":
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.0.7.tgz#96d52988efc07444c108c7c6803ba7cc93e40045"
@@ -206,7 +214,7 @@ emojis-list@^3.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
   integrity sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==
 
-esbuild@^0.9.2:
+esbuild@^0.9.3:
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.9.3.tgz#09293a0b824159c6aa2488d1c6c22f57d8448f74"
   integrity sha512-G8k0olucZp3LJ7I/p8y388t+IEyb2Y78nHrLeIxuqZqh6TYqDYP/B/7drAvYKfh83CGwKal9txVP+FTypsPJug==
@@ -589,17 +597,27 @@ util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
+vite-plugin-ssr-ssg@^1.0.0-alpha.33:
+  version "1.0.0-alpha.36"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ssr-ssg/-/vite-plugin-ssr-ssg-1.0.0-alpha.36.tgz#cd895150f29285c6daab4b474356fdd5afbbf2c9"
+  integrity sha512-+7l3eT2LG8cJW2SUYQAh5EDcHQMgUDRV1R/a2fm/QofUH1dEJTmqwfKbypRV55aQKjbYPKBFiFJ9kiUCp1pY8w==
+
 vite@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.1.1.tgz#13c7a7a5665b435f28fe8549caab181e0ad9af7b"
-  integrity sha512-nlTQrfYIkahcElD8O/oogbLbuKgAZRbvoFOth3GmRSglfPdY4RgfBjj0Fu7HeCU/2u3Jxc6jW4UuV22LGw1Yaw==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.1.2.tgz#0aecaf6d34112b24536df1a14cd8d74fdcab6e20"
+  integrity sha512-K96k5Nb1kywggFwZNGf/NQVZIrjMSvjebYWFIEQRu8AQWtzxatMF8/reExFXebmrfWAT3PTUk6l4zJBkpMtyVg==
   dependencies:
-    esbuild "^0.9.2"
+    esbuild "^0.9.3"
     postcss "^8.2.1"
     resolve "^1.19.0"
     rollup "^2.38.5"
   optionalDependencies:
     fsevents "~2.3.1"
+
+vue-router@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.5.tgz#dd0a4134bc950c37aef64b973e9ee1008428d8fa"
+  integrity sha512-AQq+pllb6FCc7rS6vh4PPcce3XA1jgK3hKNkQ4hXHwoVN7jOeAOMKCnX7XAX3etV9rmN7iNW8iIwgPk95ckBjw==
 
 vue-tsc@^0.0.8:
   version "0.0.8"
