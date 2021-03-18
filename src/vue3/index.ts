@@ -1,10 +1,10 @@
-import { renderToString } from '@vue/server-renderer'
+import { renderToString, SSRContext } from '@vue/server-renderer'
 
 export { getRoutes } from './routes'
 
 type ServerRenderer = (
   url: string,
-  context: any
-) => Promise<ReturnType<typeof renderToString>>
+  context: SSRContext
+) => typeof renderToString
 
 export type { ServerRenderer }
