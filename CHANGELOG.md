@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.39](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.38...v1.0.0-alpha.39) (2021-03-18)
+
+## ✨ New Features
+- [`777f812`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/777f812)   Change output dir structure 
+
+
+
+# [1.0.0-alpha.39](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.38...v1.0.0-alpha.39) (2021-03-18)
+
 # [v1.0.0-alpha.38](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2021-03-18)
 
 ## ✨ New Features
