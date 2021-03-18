@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.35](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.34...v1.0.0-alpha.35) (2021-03-18)
+
+## 🐛 Bug Fixes
+- [`94034f5`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/94034f5)  (vue3) Fix return types 
+
+
+
+# [1.0.0-alpha.35](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.34...v1.0.0-alpha.35) (2021-03-18)
+
 # [v1.0.0-alpha.34](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2021-03-18)
 
 ## ✨ New Features
