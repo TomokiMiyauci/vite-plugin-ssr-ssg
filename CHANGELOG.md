@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.37](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2021-03-18)
+
+## ✨ New Features
+- [`224e13c`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/224e13c)  (vue3) Apply vite ssr and ssg 
+
+
+
+# [1.0.0-alpha.37](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2021-03-18)
+
 # [v1.0.0-alpha.36](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.35...v1.0.0-alpha.36) (2021-03-18)
 
 ## 🐛 Bug Fixes
