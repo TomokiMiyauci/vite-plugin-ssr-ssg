@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.45](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.44...v1.0.0-alpha.45) (2021-03-19)
+
+## 🐛 Bug Fixes
+- [`50d8d11`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/50d8d11)   Await for page pre-loading 
+
+
+
+# [1.0.0-alpha.45](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.44...v1.0.0-alpha.45) (2021-03-19)
+
 # [v1.0.0-alpha.44](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.43...v1.0.0-alpha.44) (2021-03-19)
 
 ## 🐛 Bug Fixes
