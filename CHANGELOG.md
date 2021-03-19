@@ -1,3 +1,15 @@
+# [v1.0.0-alpha.49](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.48...v1.0.0-alpha.49) (2021-03-19)
+
+## ✨ New Features
+- [`33f2a6c`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/33f2a6c)   Add init command for vue3 ts 
+
+## 🐛 Bug Fixes
+- [`a49209b`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/a49209b)   Fix log message 
+
+
+
+# [1.0.0-alpha.49](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.48...v1.0.0-alpha.49) (2021-03-19)
+
 # [v1.0.0-alpha.48](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.47...v1.0.0-alpha.48) (2021-03-19)
 
 ## ✨ New Features
