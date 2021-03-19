@@ -1,61 +1,40 @@
 import { readFileSync } from 'fs'
-import { ViteDevServer } from 'vite'
-import express, { Express, RequestHandler } from 'express'
-import { toRootAbsolute, getViteInstance } from '../utils'
+import express, { Express, static as _static } from 'express'
+import { toRootAbsolute } from '../utils'
+import { existsSync } from 'fs'
+import compression from 'compression'
 
-const handler = (
-  isProd: boolean,
-  vite: ViteDevServer | undefined,
-  index: string
-): RequestHandler => async ({ originalUrl }, res) => {
-  try {
-    const template = isProd
-      ? index
-      : await vite?.transformIndexHtml(
-          originalUrl,
-          readFileSync(toRootAbsolute('index.html'), 'utf-8')
-        )
-    const render = isProd
-      ? (await import(toRootAbsolute('dist', 'server', 'entry-server'))).render
-      : (await vite?.ssrLoadModule(toRootAbsolute('src', 'entry-server')))
-          ?.render
+type Mode = 'CSR' | 'SSR' | 'UNKNOWN'
 
-    const context = {} as { url: string }
-    const appHtml = await render(originalUrl, context)
-
-    if (context.url) {
-      // Somewhere a `<Redirect>` was rendered
-      return res.redirect(301, context.url)
-    }
-
-    const html = template?.replace(`<!--app-html-->`, appHtml) ?? ''
-
-    res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
-  } catch (e) {
-    !isProd && vite?.ssrFixStacktrace(e)
-    console.log(e.stack)
-    res.status(500).end(e.stack)
-  }
+const detectMode = (): Mode => {
+  const isExistsDistIndex = existsSync(toRootAbsolute('dist', 'index.html'))
+  if (isExistsDistIndex) return 'CSR'
+  else if (existsSync(toRootAbsolute('dist', 'server', 'entry-server.js')))
+    return 'SSR'
+  else return 'UNKNOWN'
 }
 
-const createServer = async (
-  root = process.cwd(),
-  isProd = true
-): Promise<{
-  app: Express
-  vite: ViteDevServer | undefined
-}> => {
-  const indexProd = isProd
-    ? readFileSync(toRootAbsolute('dist', 'client', 'index.html'), 'utf-8')
-    : ''
+const createServer = async (): Promise<Express> => {
+  const mode = detectMode()
+  if (mode === 'UNKNOWN') {
+    throw Error(
+      'Outputs are not exist. Should be do vite-ssr or vite-ssg commands first.'
+    )
+  }
 
   const app = express()
-  const vite = await getViteInstance(isProd, root)
-
-  if (!isProd && vite) {
-    app.use(vite.middlewares)
+  app.use(compression())
+  if (mode === 'CSR') {
+    app.use(_static('dist'))
   } else {
-    app.use(await (await import('compression')).default())
+    const template = readFileSync(
+      toRootAbsolute('dist', 'client', 'index.html'),
+      'utf-8'
+    )
+    const render = await (import(
+      toRootAbsolute('dist', 'server', 'entry-server')
+    ) as any).render
+
     app.use(
       await (await import('serve-static')).default(
         toRootAbsolute('dist', 'client'),
@@ -64,14 +43,26 @@ const createServer = async (
         }
       )
     )
+    app.use('*', async ({ originalUrl }, res) => {
+      const context = {} as { url: string }
+      const appHtml = await render(originalUrl, context)
+
+      if (context.url) {
+        // Somewhere a `<Redirect>` was rendered
+        return res.redirect(301, context.url)
+      }
+
+      const html = template?.replace(`<!--app-html-->`, appHtml) ?? ''
+      console.log(html)
+
+      res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
+    })
   }
 
-  app.use('*', handler(isProd, vite, indexProd))
-
-  return { app, vite }
+  return app
 }
 
-createServer().then(({ app }) =>
+createServer().then((app) =>
   app.listen(5000, () => {
     console.log('http://localhost:5000')
   })
