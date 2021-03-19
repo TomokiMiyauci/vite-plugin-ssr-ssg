@@ -117,13 +117,14 @@ const config = [
       }
     ],
     watch: {
-      include: 'src/*'
+      include: 'src/vue3/*'
     },
 
     plugins: [
       typescript({
         tsconfigOverride: {
-          include: ['src/vue3/*']
+          include: ['src/vue3/*'],
+          rootDir: 'src/vue3'
         }
       })
     ]

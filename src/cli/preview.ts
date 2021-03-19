@@ -22,7 +22,7 @@ const createServer = async (): Promise<{
   const mode = detectMode()
   if (mode === 'UNKNOWN') {
     throw Error(
-      'Outputs are not exist. Should be do vite-ssr or vite-ssg commands first.'
+      'Outputs are not exist. Should be do vite-ssrg build or vite-ssrg generate commands first.'
     )
   }
 
