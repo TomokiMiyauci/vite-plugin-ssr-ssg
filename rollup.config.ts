@@ -117,7 +117,7 @@ const config = [
       }
     ],
     watch: {
-      include: 'src/vue3/*'
+      include: 'src/*'
     },
 
     plugins: [

@@ -19,8 +19,7 @@ export { render }
 const type = `: {
   app: app<Element>
   router: Router
-}
-`
+}`
 
 const entryClient = (isTS: boolean): string => `import App from './App.vue'
 import { createSSRApp, App as app } from 'vue'

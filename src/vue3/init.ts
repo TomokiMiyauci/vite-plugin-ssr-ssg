@@ -13,7 +13,7 @@ import {
   mkdirSync
 } from 'fs'
 import { join } from 'path'
-import { getExtension } from '../utils'
+import { getExtension, toRootAbsolute } from '../utils'
 
 const generateServerConfig = (path: string, isTS: boolean) => () => {
   writeFileSync(path, entryServer(isTS), {
@@ -52,8 +52,6 @@ const rewriteAppVue = (path: string) => () => {
     flag: 'w'
   })
 }
-
-import { toRootAbsolute } from '../utils'
 
 const generatePages = (basePath: string, isTS: boolean) => () => {
   writeFileSync(join(basePath, 'Index.vue'), indexVue(isTS), {
