@@ -42,8 +42,6 @@ const run = async (options?: Options) => {
       )
     })
   )
-
-  console.log('✨  Done.')
 }
 
 export { run }
