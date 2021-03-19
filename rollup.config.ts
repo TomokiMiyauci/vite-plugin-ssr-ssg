@@ -120,11 +120,14 @@ const config = [
       include: 'src/vue3/*'
     },
 
+    external: ['fs', 'path'],
+
     plugins: [
       typescript({
         tsconfigOverride: {
           include: ['src/vue3/*'],
-          rootDir: 'src/vue3'
+          rootDir: 'src/vue3',
+          outDir: 'vue3'
         }
       })
     ]
