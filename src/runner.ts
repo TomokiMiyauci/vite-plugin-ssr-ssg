@@ -32,12 +32,8 @@ const runSSR = async (options?: SSROptions): Promise<void> => {
     recursive: true,
     force: true
   })
-  await Promise.all(
-    [
-      clientBuildRun(join(outDir, options?.outDirClient ?? 'client')),
-      serverBuildRun(join(outDir, options?.outDirServer ?? 'server'))
-    ].map((fn) => fn())
-  )
+  await clientBuildRun(join(outDir, options?.outDirClient ?? 'client'))()
+  await serverBuildRun(join(outDir, options?.outDirServer ?? 'server'))()
 }
 
 export { runSSR, runSSG }
