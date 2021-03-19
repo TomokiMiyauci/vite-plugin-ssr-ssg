@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.48](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.47...v1.0.0-alpha.48) (2021-03-19)
+
+## ✨ New Features
+- [`97dbb59`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/97dbb59)   Add commands alias 
+
+
+
+# [1.0.0-alpha.48](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.47...v1.0.0-alpha.48) (2021-03-19)
+
 # [v1.0.0-alpha.47](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.46...v1.0.0-alpha.47) (2021-03-19)
 
 ## ✨ New Features
