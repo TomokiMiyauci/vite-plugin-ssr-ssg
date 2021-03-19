@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.42](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.41...v1.0.0-alpha.42) (2021-03-19)
+
+## 🐛 Bug Fixes
+- [`c38863c`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/c38863c)   Fix import syntax 
+
+
+
+# [1.0.0-alpha.42](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.41...v1.0.0-alpha.42) (2021-03-19)
+
 # [v1.0.0-alpha.41](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.40...v1.0.0-alpha.41) (2021-03-19)
 
 ## ✨ New Features
