@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.56](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.55...v1.0.0-alpha.56) (2021-03-19)
+
+## 🐛 Bug Fixes
+- [`efa0eda`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/efa0eda)   Change output config 
+
+
+
+# [1.0.0-alpha.56](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.55...v1.0.0-alpha.56) (2021-03-19)
+
 # [v1.0.0-alpha.55](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.54...v1.0.0-alpha.55) (2021-03-19)
 
 ## 🐛 Bug Fixes
