@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.44](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.43...v1.0.0-alpha.44) (2021-03-19)
+
+## 🐛 Bug Fixes
+- [`b65f8cb`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/b65f8cb)   Wait for client side bundle 
+
+
+
+# [1.0.0-alpha.44](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.43...v1.0.0-alpha.44) (2021-03-19)
+
 # [v1.0.0-alpha.43](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.42...v1.0.0-alpha.43) (2021-03-19)
 
 ## ✨ New Features
