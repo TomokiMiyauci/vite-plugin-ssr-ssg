@@ -31,9 +31,9 @@ const createServer = async (): Promise<Express> => {
       toRootAbsolute('dist', 'client', 'index.html'),
       'utf-8'
     )
-    const render = await (import(
+    const { render } = await (import(
       toRootAbsolute('dist', 'server', 'entry-server')
-    ) as any).render
+    ) as any)
 
     app.use(
       await (await import('serve-static')).default(
@@ -53,7 +53,6 @@ const createServer = async (): Promise<Express> => {
       }
 
       const html = template?.replace(`<!--app-html-->`, appHtml) ?? ''
-      console.log(html)
 
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
     })
