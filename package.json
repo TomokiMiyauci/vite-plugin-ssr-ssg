@@ -36,7 +36,6 @@
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
     "@vue/server-renderer": "^3.0.7",
-    "app-root-path": "^3.0.0",
     "commitizen": "^4.2.3",
     "commitlint-config-gitmoji": "^2.2.3",
     "compression": "^1.7.4",
