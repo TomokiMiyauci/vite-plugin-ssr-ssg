@@ -1,3 +1,15 @@
+# [v1.0.0-alpha.50](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.49...v1.0.0-alpha.50) (2021-03-19)
+
+## ✨ New Features
+- [`319572b`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/319572b)   Apply ts and js file 
+
+## 🐛 Bug Fixes
+- [`ccc0795`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ccc0795)   Remove unused 
+
+
+
+# [1.0.0-alpha.50](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.49...v1.0.0-alpha.50) (2021-03-19)
+
 # [v1.0.0-alpha.49](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.48...v1.0.0-alpha.49) (2021-03-19)
 
 ## ✨ New Features
