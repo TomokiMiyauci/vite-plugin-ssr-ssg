@@ -3,6 +3,8 @@ import yargs from 'yargs/yargs'
 import { run as runDev } from './dev'
 import { run as runPreview } from './preview'
 import { runSSG, runSSR } from '../runner'
+import { rewritePackageJson } from '../init'
+import { toRootAbsolute } from '../utils'
 
 yargs(hideBin(process.argv))
   .command(
@@ -14,6 +16,16 @@ yargs(hideBin(process.argv))
         default: 3000
       }),
     ({ port }) => runDev(port)
+  )
+  .command(
+    ['init'],
+    'init vite-ssrg project',
+    ({ positional }) =>
+      positional('framework', {
+        describe: 'overwrite framework',
+        default: undefined
+      }),
+    () => rewritePackageJson(toRootAbsolute('package.json'))
   )
   .command(
     'build',
