@@ -29,7 +29,7 @@ const createServer = async (): Promise<{
   const app = express()
   app.use(compression())
   if (mode === 'CSR') {
-    app.use(_static('dist'))
+    app.use(_static('dist', { extensions: ['html'] }))
   } else {
     const template = readFileSync(
       toRootAbsolute('dist', 'client', 'index.html'),
