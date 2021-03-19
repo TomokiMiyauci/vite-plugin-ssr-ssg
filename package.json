@@ -6,11 +6,7 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "vite-init": "dist/vite-init.js",
-    "vite-dev": "dist/vite-dev.js",
-    "vite-ssg": "dist/vite-ssg.js",
-    "vite-ssr": "dist/vite-ssr.js",
-    "vite-preview": "dist/vite-preview.js"
+    "vite-ssrg": "dist/bin.js"
   },
   "version": "1.0.0-alpha.46",
   "license": "MIT",

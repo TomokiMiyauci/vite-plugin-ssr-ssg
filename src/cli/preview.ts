@@ -65,16 +65,17 @@ const createServer = async (): Promise<{
   return { app, mode }
 }
 
-createServer().then(({ app, mode }) =>
-  app.listen(5000, () => {
-    console.clear()
-    console.log(
-      `${CYAN}vite-plugin-ssr-ssg ${GREEN}build preview ${YELLOW}${
-        mode === 'CSR' ? 'static' : 'node'
-      } server${GREEN} running at:${RESET}\n`
-    )
-    console.log('> Local:  ', `${CYAN}http://localhost:5000/${RESET}`)
-  })
-)
+const run = (port: number) =>
+  createServer().then(({ app, mode }) =>
+    app.listen(port, () => {
+      console.clear()
+      console.log(
+        `${CYAN}vite-plugin-ssr-ssg ${GREEN}build preview ${YELLOW}${
+          mode === 'CSR' ? 'static' : 'node'
+        } server${GREEN} running at:${RESET}\n`
+      )
+      console.log('> Local:  ', `${CYAN}http://localhost:${port}/${RESET}`)
+    })
+  )
 
-export { createServer }
+export { createServer, run }

@@ -43,14 +43,15 @@ const createServer = async (
   return { app, vite }
 }
 
-createServer().then(({ app }) =>
-  app.listen(3000, () => {
-    console.clear()
-    console.log(
-      `${CYAN}vite-plugin-ssr-ssg ${GREEN}dev server running at:${RESET}\n`
-    )
-    console.log('> Local:  ', `${CYAN}http://localhost:3000/${RESET}`)
-  })
-)
+const run = (port: number) =>
+  createServer().then(({ app }) =>
+    app.listen(port, () => {
+      console.clear()
+      console.log(
+        `${CYAN}vite-plugin-ssr-ssg ${GREEN}dev server running at:${RESET}\n`
+      )
+      console.log('> Local:  ', `${CYAN}http://localhost:${port}/${RESET}`)
+    })
+  )
 
-export { createServer }
+export { createServer, run }

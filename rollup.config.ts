@@ -13,70 +13,10 @@ const shebang = () => {
 
 const config = [
   {
-    input: 'src/cli/ssr.ts',
+    input: 'src/cli/index.ts',
     output: [
       {
-        file: bin['vite-ssr'],
-        format: 'cjs',
-        sourcemap: true
-      }
-      // {
-      //   file: module,
-      //   format: 'es',
-      //   sourcemap: true
-      // }
-    ],
-    watch: {
-      include: 'src/**'
-    },
-    plugins: [
-      // terser(),
-      typescript({ useTsconfigDeclarationDir: false }),
-      shebang()
-      // sourceMaps()
-    ]
-  },
-  {
-    input: 'src/cli/ssg.ts',
-    output: [
-      {
-        file: bin['vite-ssg'],
-        format: 'cjs',
-        sourcemap: true
-      }
-    ],
-    watch: {
-      include: 'src/**'
-    },
-    plugins: [
-      // terser(),
-      typescript({ useTsconfigDeclarationDir: false }),
-      shebang()
-    ]
-  },
-  {
-    input: 'src/cli/dev.ts',
-    output: [
-      {
-        file: bin['vite-dev'],
-        format: 'cjs',
-        sourcemap: true
-      }
-    ],
-    watch: {
-      include: 'src/**'
-    },
-    plugins: [
-      // terser(),
-      typescript({ useTsconfigDeclarationDir: false }),
-      shebang()
-    ]
-  },
-  {
-    input: 'src/cli/preview.ts',
-    output: [
-      {
-        file: bin['vite-preview'],
+        file: bin['vite-ssrg'],
         format: 'cjs',
         sourcemap: true
       }
