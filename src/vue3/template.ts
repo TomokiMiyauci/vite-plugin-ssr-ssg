@@ -1,7 +1,7 @@
 const entryServer = (
   isTS: boolean
 ): string => `import { createApp } from './entry-client'
-import { ServerRenderer } from 'vite-plugin-ssr-ssg/vue3'
+${isTS ? "import { ServerRenderer } from 'vite-plugin-ssr-ssg/vue3'" : ''}
 import { renderToString } from '@vue/server-renderer'
 
 const render${isTS ? ': ServerRenderer' : ''} = async (url, context) => {
@@ -22,12 +22,11 @@ const type = `: {
 }`
 
 const entryClient = (isTS: boolean): string => `import App from './App.vue'
-import { createSSRApp, App as app } from 'vue'
+import { createSSRApp } from 'vue'
 import {
   createMemoryHistory,
   createRouter,
-  createWebHistory,
-  Router
+  createWebHistory${isTS ? ',\n  Router' : ''}
 } from 'vue-router'
 import { getRoutes } from 'vite-plugin-ssr-ssg/vue3'
 
