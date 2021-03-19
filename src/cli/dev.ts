@@ -3,6 +3,7 @@ import { ViteDevServer } from 'vite'
 import express, { Express } from 'express'
 import { toRootAbsolute } from '../utils'
 import { createServer as _createServer } from 'vite'
+import { CYAN, GREEN, RESET } from '../constants'
 
 const createServer = async (
   root = process.cwd()
@@ -44,7 +45,11 @@ const createServer = async (
 
 createServer().then(({ app }) =>
   app.listen(3000, () => {
-    console.log('http://localhost:3000')
+    console.clear()
+    console.log(
+      `${CYAN}vite-plugin-ssr-ssg ${GREEN}dev server running at:${RESET}\n`
+    )
+    console.log('> Local:  ', `${CYAN}http://localhost:3000/${RESET}`)
   })
 )
 

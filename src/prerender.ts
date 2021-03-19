@@ -1,6 +1,7 @@
 import { writeFileSync, readFileSync } from 'fs'
 import { toRootAbsolute, getRoutePaths } from './utils'
 import { join } from 'path'
+import { CYAN, GREEN, RESET, GRAY } from './constants'
 
 interface Options {
   outDir?: string
@@ -20,6 +21,8 @@ const run = async (options?: Options) => {
 
   const pages = getRoutePaths()
 
+  console.log(`\n${CYAN}vite-plugin-ssr-ssg ${GREEN}pre-rendered:${RESET}\n`)
+
   pages.forEach(async (url) => {
     const appHtml = await render(url, {})
     const html = template.replace(`<!--app-html-->`, appHtml)
@@ -29,8 +32,16 @@ const run = async (options?: Options) => {
       `${url === '/' ? 'index' : url}.html`
     )
     writeFileSync(toRootAbsolute(filePath), html)
-    console.log('pre-rendered:', filePath)
+    console.log(
+      `${GRAY}${join(
+        options?.outDir ?? 'dist',
+        options?.outDirClient ?? '',
+        '/'
+      )}${GREEN}${url === '/' ? 'index' : url}.html${RESET}`
+    )
   })
+
+  console.log('✨  Done.')
 }
 
 export { run }

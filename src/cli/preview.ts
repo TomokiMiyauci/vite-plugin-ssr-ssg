@@ -3,6 +3,7 @@ import express, { Express, static as _static } from 'express'
 import { toRootAbsolute } from '../utils'
 import { existsSync } from 'fs'
 import compression from 'compression'
+import { CYAN, GREEN, RESET } from '../constants'
 
 type Mode = 'CSR' | 'SSR' | 'UNKNOWN'
 
@@ -63,7 +64,11 @@ const createServer = async (): Promise<Express> => {
 
 createServer().then((app) =>
   app.listen(5000, () => {
-    console.log('http://localhost:5000')
+    console.clear()
+    console.log(
+      `${CYAN}vite-plugin-ssr-ssg ${GREEN}build preview server running at:${RESET}\n`
+    )
+    console.log('> Local:  ', `${CYAN}http://localhost:5000/${RESET}`)
   })
 )
 
