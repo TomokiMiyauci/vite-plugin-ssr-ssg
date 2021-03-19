@@ -6,7 +6,7 @@ import { runSSG, runSSR } from '../runner'
 
 yargs(hideBin(process.argv))
   .command(
-    'dev',
+    ['dev', '*'],
     'start the dev server',
     ({ positional }) =>
       positional('port', {
@@ -58,4 +58,7 @@ yargs(hideBin(process.argv))
         default: 5000
       }),
     ({ port }) => runPreview(port)
-  ).argv
+  )
+  .alias('h', 'help')
+  .alias('v', 'version')
+  .strict().argv
