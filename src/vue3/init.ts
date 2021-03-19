@@ -12,8 +12,15 @@ import {
   existsSync,
   mkdirSync
 } from 'fs'
-import { join } from 'path'
-import { getExtension, toRootAbsolute } from '../utils'
+import { join, resolve } from 'path'
+
+const getExtension = (isTS: boolean, x?: boolean): string => {
+  const _x = x ? 'x' : ''
+  return isTS ? `.ts${_x}` : `.js${_x}`
+}
+
+const toRootAbsolute = (...path: string[]): string =>
+  resolve(process.env.PWD || '', ...path)
 
 const generateServerConfig = (path: string, isTS: boolean) => () => {
   writeFileSync(path, entryServer(isTS), {

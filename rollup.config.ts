@@ -126,8 +126,9 @@ const config = [
       typescript({
         tsconfigOverride: {
           include: ['src/vue3/*'],
-          rootDir: 'src/vue3',
-          outDir: 'vue3'
+          compilerOptions: {
+            rootDir: 'src/vue3'
+          }
         }
       })
     ]
