@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.53](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.52...v1.0.0-alpha.53) (2021-03-19)
+
+## 🐛 Bug Fixes
+- [`ce0d210`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ce0d210)   Fix import 
+
+
+
+# [1.0.0-alpha.53](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.52...v1.0.0-alpha.53) (2021-03-19)
+
 # [v1.0.0-alpha.52](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.51...v1.0.0-alpha.52) (2021-03-19)
 
 ## 🐛 Bug Fixes
