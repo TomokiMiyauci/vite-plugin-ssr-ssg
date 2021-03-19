@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.47](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.46...v1.0.0-alpha.47) (2021-03-19)
+
+## ✨ New Features
+- [`fbaa846`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/fbaa846)   Merge one command 
+
+
+
+# [1.0.0-alpha.47](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.46...v1.0.0-alpha.47) (2021-03-19)
+
 # [v1.0.0-alpha.46](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.45...v1.0.0-alpha.46) (2021-03-19)
 
 ## 🐛 Bug Fixes
