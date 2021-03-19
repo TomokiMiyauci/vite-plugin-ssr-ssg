@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.52](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.51...v1.0.0-alpha.52) (2021-03-19)
+
+## 🐛 Bug Fixes
+- [`fbf9771`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/fbf9771)  (vue3) Adjust style 
+
+
+
+# [1.0.0-alpha.52](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.51...v1.0.0-alpha.52) (2021-03-19)
+
 # [v1.0.0-alpha.51](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.50...v1.0.0-alpha.51) (2021-03-19)
 
 ## 🐛 Bug Fixes
