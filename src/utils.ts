@@ -12,6 +12,11 @@ const getPath = (fileName: string): string => {
   return name === 'index' ? '/' : `/${name}`
 }
 
+const getExtension = (isTS: boolean, x?: boolean): string => {
+  const _x = x ? 'x' : ''
+  return isTS ? `.ts${_x}` : `.js${_x}`
+}
+
 const getRoutePaths = (): string[] => {
   const pageFileNames = readdirSync(toRootAbsolute('src', 'pages'))
   const routePaths = pageFileNames
@@ -20,4 +25,4 @@ const getRoutePaths = (): string[] => {
   return routePaths
 }
 
-export { getRoutePaths, toRootAbsolute }
+export { getRoutePaths, toRootAbsolute, getExtension }

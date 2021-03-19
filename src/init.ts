@@ -12,6 +12,9 @@ const defaultFrameworkMap = frameworksWithExt.reduce((acc, cur) => {
   return { ...acc, [cur]: false }
 }, {} as FrameworkMap)
 
+const isTS = (devDependencies: Record<string, string>): boolean =>
+  'typescript' in devDependencies
+
 type FrameworkMap = Readonly<
   {
     [P in typeof frameworksWithExt[number]]: boolean
@@ -34,6 +37,8 @@ const rewritePackageJson = async (path: string): Promise<void> => {
     generate: 'vite-ssrg generate',
     serve: 'vite-ssrg preview'
   }
+
+  console.log(isTS(_devDependencies))
 
   const dependencies = {
     ..._dependencies,
@@ -72,7 +77,7 @@ const rewritePackageJson = async (path: string): Promise<void> => {
   const frameworkMap = getFrameworkMap(framework, defaultFrameworkMap)
   const generate = generatorFactory(frameworkMap)
 
-  generate()
+  generate(isTS(_devDependencies))
 
   writeFileSync(path, JSON.stringify(packageJson, null, 2), {
     encoding: 'utf-8',
