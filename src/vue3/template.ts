@@ -22,7 +22,7 @@ const type = `: {
 }`
 
 const entryClient = (isTS: boolean): string => `import App from './App.vue'
-import { createSSRApp } from 'vue'
+import { createSSRApp${isTS ? ', App as app' : ''} } from 'vue'
 import {
   createMemoryHistory,
   createRouter,
