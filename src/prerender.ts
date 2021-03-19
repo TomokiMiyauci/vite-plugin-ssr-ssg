@@ -23,23 +23,25 @@ const run = async (options?: Options) => {
 
   console.log(`\n${CYAN}vite-plugin-ssr-ssg ${GREEN}pre-rendered:${RESET}\n`)
 
-  pages.forEach(async (url) => {
-    const appHtml = await render(url, {})
-    const html = template.replace(`<!--app-html-->`, appHtml)
-    const filePath = join(
-      options?.outDir ?? 'dist',
-      options?.outDirClient ?? '',
-      `${url === '/' ? 'index' : url}.html`
-    )
-    writeFileSync(toRootAbsolute(filePath), html)
-    console.log(
-      `${GRAY}${join(
+  await Promise.all(
+    pages.map(async (url) => {
+      const appHtml = await render(url, {})
+      const html = template.replace(`<!--app-html-->`, appHtml)
+      const filePath = join(
         options?.outDir ?? 'dist',
         options?.outDirClient ?? '',
-        '/'
-      )}${GREEN}${url === '/' ? 'index' : url}.html${RESET}`
-    )
-  })
+        `${url === '/' ? 'index' : url}.html`
+      )
+      writeFileSync(toRootAbsolute(filePath), html)
+      console.log(
+        `${GRAY}${join(
+          options?.outDir ?? 'dist',
+          options?.outDirClient ?? '',
+          '/'
+        )}${GREEN}${url === '/' ? 'index' : url}.html${RESET}`
+      )
+    })
+  )
 
   console.log('✨  Done.')
 }

@@ -3,7 +3,7 @@ import express, { Express, static as _static } from 'express'
 import { toRootAbsolute } from '../utils'
 import { existsSync } from 'fs'
 import compression from 'compression'
-import { CYAN, GREEN, RESET } from '../constants'
+import { CYAN, GREEN, RESET, YELLOW } from '../constants'
 
 type Mode = 'CSR' | 'SSR' | 'UNKNOWN'
 
@@ -15,7 +15,10 @@ const detectMode = (): Mode => {
   else return 'UNKNOWN'
 }
 
-const createServer = async (): Promise<Express> => {
+const createServer = async (): Promise<{
+  app: Express
+  mode: 'CSR' | 'SSR'
+}> => {
   const mode = detectMode()
   if (mode === 'UNKNOWN') {
     throw Error(
@@ -59,14 +62,16 @@ const createServer = async (): Promise<Express> => {
     })
   }
 
-  return app
+  return { app, mode }
 }
 
-createServer().then((app) =>
+createServer().then(({ app, mode }) =>
   app.listen(5000, () => {
     console.clear()
     console.log(
-      `${CYAN}vite-plugin-ssr-ssg ${GREEN}build preview server running at:${RESET}\n`
+      `${CYAN}vite-plugin-ssr-ssg ${GREEN}build preview ${YELLOW}${
+        mode === 'CSR' ? 'static' : 'node'
+      } server${GREEN} running at:${RESET}\n`
     )
     console.log('> Local:  ', `${CYAN}http://localhost:5000/${RESET}`)
   })
