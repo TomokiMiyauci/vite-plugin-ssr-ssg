@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.41](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.40...v1.0.0-alpha.41) (2021-03-19)
+
+## ✨ New Features
+- [`4100765`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/4100765)   Add preview for CSR mode 
+
+
+
+# [1.0.0-alpha.41](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.40...v1.0.0-alpha.41) (2021-03-19)
+
 # [v1.0.0-alpha.40](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.39...v1.0.0-alpha.40) (2021-03-18)
 
 ## 🐛 Bug Fixes
