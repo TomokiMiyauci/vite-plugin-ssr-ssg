@@ -4,10 +4,10 @@
   "scripts": {
     "cz": "yarn --cwd ../.. commit",
     "commit": "yarn --cwd ../.. commit",
-    "dev": "vite-dev",
-    "build": "vite-ssr",
-    "generate": "vite-ssg",
-    "serve": "vite-preview"
+    "dev": "vite-ssrg dev",
+    "build": "vite-ssrg build",
+    "generate": "vite-ssrg generate",
+    "serve": "vite-ssrg preview"
   },
   "dependencies": {
     "vue": "^3.0.5",
