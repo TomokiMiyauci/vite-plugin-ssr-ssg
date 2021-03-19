@@ -1,7 +1,6 @@
 import { resolve } from 'path'
 import { readdirSync } from 'fs'
-import { PIPED_EXTENSIONS, isTest } from './constants'
-import { ViteDevServer } from 'vite'
+import { PIPED_EXTENSIONS } from './constants'
 
 const toRootAbsolute = (...path: string[]): string =>
   resolve(process.env.PWD || '', ...path)
@@ -21,19 +20,4 @@ const getRoutePaths = (): string[] => {
   return routePaths
 }
 
-const getViteInstance = async <T extends boolean>(
-  isProd: T,
-  root: string
-): Promise<ViteDevServer | undefined> => {
-  if (isProd) return undefined
-
-  return await (await import('vite')).createServer({
-    root,
-    logLevel: isTest ? 'error' : 'info',
-    server: {
-      middlewareMode: true
-    }
-  })
-}
-
-export { getRoutePaths, toRootAbsolute, getViteInstance }
+export { getRoutePaths, toRootAbsolute }

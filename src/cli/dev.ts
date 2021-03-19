@@ -1,72 +1,43 @@
 import { readFileSync } from 'fs'
 import { ViteDevServer } from 'vite'
-import express, { Express, RequestHandler } from 'express'
-import { toRootAbsolute, getViteInstance } from '../utils'
-
-const handler = (
-  isProd: boolean,
-  vite: ViteDevServer | undefined,
-  index: string
-): RequestHandler => async ({ originalUrl }, res) => {
-  try {
-    const template = isProd
-      ? index
-      : await vite?.transformIndexHtml(
-          originalUrl,
-          readFileSync(toRootAbsolute('index.html'), 'utf-8')
-        )
-    const render = isProd
-      ? (await import(toRootAbsolute('dist', 'server', 'entry-server'))).render
-      : (await vite?.ssrLoadModule(toRootAbsolute('src', 'entry-server')))
-          ?.render
-
-    const context = {} as { url: string }
-    const appHtml = await render(originalUrl, context)
-
-    if (context.url) {
-      // Somewhere a `<Redirect>` was rendered
-      return res.redirect(301, context.url)
-    }
-
-    const html = template?.replace(`<!--app-html-->`, appHtml) ?? ''
-
-    res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
-  } catch (e) {
-    !isProd && vite?.ssrFixStacktrace(e)
-    console.log(e.stack)
-    res.status(500).end(e.stack)
-  }
-}
+import express, { Express } from 'express'
+import { toRootAbsolute } from '../utils'
+import { createServer as _createServer } from 'vite'
 
 const createServer = async (
-  root = process.cwd(),
-  isProd = process.env.NODE_ENV === 'production'
+  root = process.cwd()
 ): Promise<{
   app: Express
   vite: ViteDevServer | undefined
 }> => {
-  const indexProd = isProd
-    ? readFileSync(toRootAbsolute('dist', 'client', 'index.html'), 'utf-8')
-    : ''
-
   const app = express()
-  const vite = await getViteInstance(isProd, root)
+  const vite = await _createServer({
+    root,
+    logLevel: 'info',
+    server: {
+      middlewareMode: true
+    }
+  })
 
-  if (!isProd && vite) {
-    app.use(vite.middlewares)
-  } else {
-    app.use(await (await import('compression')).default())
-    app.use(
-      await (await import('serve-static')).default(
-        toRootAbsolute('dist', 'client'),
-        {
-          index: false
-        }
-      )
-    )
-  }
+  const { render } = await vite.ssrLoadModule(
+    toRootAbsolute('src', 'entry-server')
+  )
+  const index = readFileSync(toRootAbsolute('index.html'), 'utf-8')
+  app.use(vite.middlewares)
 
-  app.use('*', handler(isProd, vite, indexProd))
+  app.use('*', async ({ originalUrl }, res) => {
+    const context = {} as { url: string }
+    const appHtml = await render(originalUrl, context)
+
+    if (context.url) {
+      return res.redirect(301, context.url)
+    }
+
+    const template = await vite.transformIndexHtml(originalUrl, index)
+    const html = template.replace(`<!--app-html-->`, appHtml) ?? ''
+
+    res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
+  })
 
   return { app, vite }
 }
