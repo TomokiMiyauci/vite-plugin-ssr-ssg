@@ -38,7 +38,7 @@ const run = async (options?: Options) => {
           options?.outDir ?? 'dist',
           options?.outDirClient ?? '',
           '/'
-        )}${GREEN}${url === '/' ? 'index' : url}.html${RESET}`
+        )}${GREEN}${url === '/' ? 'index' : url.slice(1)}.html${RESET}`
       )
     })
   )
