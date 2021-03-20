@@ -2,6 +2,7 @@
   "name": "react",
   "version": "0.0.0",
   "description": "vite-plugin-ssr-ssg sample for react project",
+  "license": "MIT",
   "private": false,
   "scripts": {
     "cz": "yarn --cwd ../.. commit",

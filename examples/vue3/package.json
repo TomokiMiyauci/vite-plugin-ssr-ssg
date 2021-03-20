@@ -1,6 +1,9 @@
 {
   "name": "vue3",
   "version": "0.0.0",
+  "license": "MIT",
+  "description": "vite-plugin-ssr-ssg sample for vue project",
+  "private": false,
   "scripts": {
     "cz": "yarn --cwd ../.. commit",
     "commit": "yarn --cwd ../.. commit",

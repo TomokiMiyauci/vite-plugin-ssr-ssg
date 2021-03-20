@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
-
-const Index: FC = () => <div>Home</div>
+import React from 'react'
+const Index = () => <div>Home</div>
 export default Index

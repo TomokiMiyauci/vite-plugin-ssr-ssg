@@ -9,8 +9,8 @@ export const App: FunctionComponent<{ url?: string }> = ({ url }) => {
   return (
     <>
       <nav>
-        <Link href="/about">about</Link>
         <Link href="/">/</Link>
+        <Link href="/about">about</Link>
       </nav>
 
       <Router url={url}>

@@ -535,9 +535,9 @@ typescript@^4.1.2:
   integrity sha512-qOcYwxaByStAWrBf4x0fibwZvMRG+r4cQoTjbPtUlrWjBHbmCAww1i448U0GJ+3cNNEtebDteo/cHOR3xJ4wEw==
 
 vite-plugin-ssr-ssg@^1.0.0-alpha.8:
-  version "1.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/vite-plugin-ssr-ssg/-/vite-plugin-ssr-ssg-1.0.0-alpha.33.tgz#293c29bff44f01ca80e9037315d33c52091b5dc6"
-  integrity sha512-HmFlsDeZl9bfXZAkGjTKEqEnrvb7O01Dv+ite/KAh9wU9VrWQnJ6UwlCkeDZgZ0mGH4fk+c3ZaCP7B4qKzDCwg==
+  version "1.0.0-alpha.60"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ssr-ssg/-/vite-plugin-ssr-ssg-1.0.0-alpha.60.tgz#9bd8e7eccb35cbdbf2eb9bf452c77e0ed215f4c4"
+  integrity sha512-V6B6cqmV803D0R+TTqiD+y+28ZobuEyhAr6fbFsAEC3LMLWM9NwW0Rm927UPVhjw2Xbztx9J+fBLoup1hzm6MA==
 
 vite@2.0.5:
   version "2.0.5"

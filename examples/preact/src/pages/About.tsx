@@ -1,4 +1,2 @@
-import { FunctionComponent } from 'preact'
-
-const About: FunctionComponent = () => <div>About</div>
+const About = () => <div>About</div>
 export default About

@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
-
-const About: FC = () => <div>About</div>
+import React from 'react'
+const About = () => <div>About</div>
 export default About
