@@ -1,6 +1,7 @@
 import { writeFileSync } from 'fs'
 import { loadConfigFromFile } from 'vite'
 import { generateFiles } from './vue3'
+import { generateFiles as genPrectTemplate } from './preact'
 
 const frameworks = ['react', 'preact', 'vue', 'svelte', 'vanilla'] as const
 const frameworksWithExt = frameworks
@@ -30,32 +31,6 @@ const rewritePackageJson = async (path: string): Promise<void> => {
       ...config
     }
   } = await import(path)
-  const scripts = {
-    ..._scripts,
-    dev: 'vite-ssrg dev',
-    build: 'vite-ssrg build',
-    generate: 'vite-ssrg generate',
-    serve: 'vite-ssrg preview'
-  }
-
-  console.log(isTS(_devDependencies))
-
-  const dependencies = {
-    ..._dependencies,
-    'vue-router': '^4.0.5'
-  }
-
-  const devDependencies = {
-    ..._devDependencies,
-    '@vue/server-renderer': '^3.0.7'
-  }
-
-  const packageJson = {
-    ...config,
-    scripts,
-    dependencies,
-    devDependencies
-  } as Record<string, string>
 
   const { config: userConfig } =
     (await loadConfigFromFile({
@@ -77,6 +52,32 @@ const rewritePackageJson = async (path: string): Promise<void> => {
   const frameworkMap = getFrameworkMap(framework, defaultFrameworkMap)
   const generate = generatorFactory(frameworkMap)
 
+  const scripts = {
+    ..._scripts,
+    dev: 'vite-ssrg dev',
+    build: 'vite-ssrg build',
+    generate: 'vite-ssrg generate',
+    serve: 'vite-ssrg preview'
+  }
+
+  const dependencies: Record<string, string> = {
+    ..._dependencies,
+    ...getDependency(frameworkMap)
+  }
+  console.log(isTS(_devDependencies), dependencies, frameworkMap)
+
+  const devDependencies: Record<string, string> = {
+    ..._devDependencies,
+    ...getDevDependency(frameworkMap)
+  }
+
+  const packageJson = {
+    ...config,
+    scripts,
+    dependencies,
+    devDependencies
+  } as Record<string, string>
+
   generate(isTS(_devDependencies))
 
   writeFileSync(path, JSON.stringify(packageJson, null, 2), {
@@ -88,7 +89,7 @@ const rewritePackageJson = async (path: string): Promise<void> => {
 const detectFramework = (pluginNames: string[]) => {
   if (pluginNames.includes('vite:vue')) return 'VUE'
   else if (pluginNames.includes('vite:react')) return 'REACT'
-  else if (pluginNames.includes('vite:preact')) return 'PREACT'
+  else if (pluginNames.includes('preact:config')) return 'PREACT'
   else return 'UNKNOWN'
 }
 
@@ -119,12 +120,54 @@ const generatorFactory = ({ react, vue, preact, svelte }: FrameworkMap) => {
   if (react) {
     return () => {}
   } else if (preact) {
-    return () => {}
+    return genPrectTemplate
   } else if (vue) {
     return generateFiles
   } else if (svelte) {
     return () => {}
   } else return () => {}
+}
+
+const getDependency = ({
+  react,
+  vue,
+  preact,
+  svelte
+}: FrameworkMap): Record<string, string> => {
+  if (react) {
+    return {}
+  } else if (preact) {
+    return {
+      'preact-router': '^3.2.1'
+    }
+  } else if (vue) {
+    return {
+      'vue-router': '^4.0.5'
+    }
+  } else if (svelte) {
+    return {}
+  } else return {}
+}
+
+const getDevDependency = ({
+  react,
+  vue,
+  preact,
+  svelte
+}: FrameworkMap): Record<string, string> => {
+  if (react) {
+    return {}
+  } else if (preact) {
+    return {
+      'preact-render-to-string': '^5.1.16'
+    }
+  } else if (vue) {
+    return {
+      '@vue/server-renderer': '^3.0.7'
+    }
+  } else if (svelte) {
+    return {}
+  } else return {}
 }
 
 export { rewritePackageJson }
