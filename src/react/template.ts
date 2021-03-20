@@ -39,7 +39,7 @@ const render${isTS ? ': ServerRenderer' : ''} = async (
   return renderToString(app)
 }
 
-export { render }
+export default render
 `
 
 export const indexTSX = `import React from 'react'

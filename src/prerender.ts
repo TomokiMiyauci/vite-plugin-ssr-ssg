@@ -9,7 +9,7 @@ interface Options {
   outDirServer?: string
 }
 const run = async (options?: Options) => {
-  const { render } = require(toRootAbsolute(
+  const { default: render } = require(toRootAbsolute(
     options?.outDir ?? 'dist',
     options?.outDirServer ?? 'server',
     'entry-server'
