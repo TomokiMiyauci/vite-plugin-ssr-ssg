@@ -35,7 +35,7 @@ const createServer = async (): Promise<{
       toRootAbsolute('dist', 'client', 'index.html'),
       'utf-8'
     )
-    const { render } = await (import(
+    const { default: render } = await (import(
       toRootAbsolute('dist', 'server', 'entry-server')
     ) as any)
 
@@ -52,7 +52,6 @@ const createServer = async (): Promise<{
       const appHtml = await render(originalUrl, context)
 
       if (context.url) {
-        // Somewhere a `<Redirect>` was rendered
         return res.redirect(301, context.url)
       }
 

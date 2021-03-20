@@ -18,7 +18,7 @@ const render${isTS ? ': ServerRenderer' : ''} = async (
   return renderToString(app)
 }
 
-export { render }
+export default render
 `
 
 export const indexTSX = `const Index = () => <div>Home</div>

@@ -20,7 +20,7 @@ const createServer = async (
     }
   })
 
-  const { render } = await vite.ssrLoadModule(
+  const { default: render } = await vite.ssrLoadModule(
     toRootAbsolute('src', 'entry-server')
   )
   const index = readFileSync(toRootAbsolute('index.html'), 'utf-8')

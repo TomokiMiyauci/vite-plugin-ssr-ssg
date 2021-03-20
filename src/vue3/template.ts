@@ -13,7 +13,7 @@ const render${isTS ? ': ServerRenderer' : ''} = async (url, context) => {
   return renderToString(app, context)
 }
 
-export { render }
+export default render
 `
 
 const type = `: {
