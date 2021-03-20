@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['gitmoji'],
+  extends: [],
   parserPreset: {
     parserOpts: {
       headerPattern: /^(:\w*:)(?: \((.*?)\))?\s((?:.*(?=\())|.*)(?:\(#(\d*)\))?/,
