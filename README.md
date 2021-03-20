@@ -32,7 +32,7 @@ yarn vite-ssrg init
 
 This alone creates an environment for SSR and SSG. The framework and TS or JS are automatically detected.
 
-Refer to [example] (./examples) for manual setup.
+Refer to [examples](./examples) for manual setup.
 
 ## 🛠️ Commands
 
