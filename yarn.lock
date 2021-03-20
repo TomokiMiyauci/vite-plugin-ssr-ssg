@@ -1489,22 +1489,6 @@ commitizen@^4.0.3, commitizen@^4.2.3:
     strip-bom "4.0.0"
     strip-json-comments "3.0.1"
 
-commitlint-config-gitmoji@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/commitlint-config-gitmoji/-/commitlint-config-gitmoji-2.2.3.tgz#e7dcf3902f3eed1f602c65f1eede07cc6d86a5b8"
-  integrity sha512-lCA/I2NM5LutG++lCHIKEpEI0qUGsOuvlWw2faD4vbXPal7ENkTIn2ggG5ktM0sAz40osR/RS1paPxyI8rtbZw==
-  dependencies:
-    "@gitmoji/commit-types" "1.1.5"
-    "@gitmoji/parser-opts" "1.3.0"
-    commitlint-plugin-gitmoji "2.1.0"
-
-commitlint-plugin-gitmoji@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/commitlint-plugin-gitmoji/-/commitlint-plugin-gitmoji-2.1.0.tgz#da54a2e4909affbf03ef0012f6ad86a02eb8c009"
-  integrity sha512-G5Othkb/KkhEj4oLhUHiAYLK9Q7T/IdQ/c5HiCwgslKI2zfxSc9Ocopz+pMmvGtVrU16g22fHGBiO0Z+KOGkyA==
-  dependencies:
-    emoji-name-map "^1.2.9"
-
 commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
@@ -1611,6 +1595,15 @@ conventional-changelog-conventionalcommits@^4.3.1:
     compare-func "^2.0.0"
     lodash "^4.17.15"
     q "^1.5.1"
+
+conventional-changelog-gitmoji-config@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-gitmoji-config/-/conventional-changelog-gitmoji-config-1.4.3.tgz#a4516ea4400e512ddd1e573b8234f69a9ed21a6d"
+  integrity sha512-8HqbhNFuya85ICZvXv1ck2a2B7KlSVPGEFtK+Jar/qCUuq+E0PiINBJbpYcHOfsEucDRW4W4AUMQH7ap6+0DdQ==
+  dependencies:
+    "@gitmoji/commit-types" "1.1.5"
+    "@gitmoji/parser-opts" "1.3.0"
+    cosmiconfig "^7.0.0"
 
 conventional-changelog-writer@^4.0.0:
   version "4.1.0"
@@ -2031,15 +2024,6 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-emoji-name-map@^1.2.9:
-  version "1.2.9"
-  resolved "https://registry.yarnpkg.com/emoji-name-map/-/emoji-name-map-1.2.9.tgz#32a0788e748d9c7185a29a000102fb263fe2892d"
-  integrity sha512-MSM8y6koSqh/2uEMI2VoKA+Ac0qL5RkgFGP/pzL6n5FOrOJ7FOZFxgs7+uNpqA+AT+WmdbMPXkd3HnFXXdz4AA==
-  dependencies:
-    emojilib "^2.0.2"
-    iterate-object "^1.3.1"
-    map-o "^2.0.1"
-
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
@@ -2054,11 +2038,6 @@ emoji-regex@^9.0.0:
   version "9.2.2"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
-
-emojilib@^2.0.2:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/emojilib/-/emojilib-2.4.0.tgz#ac518a8bb0d5f76dda57289ccb2fdf9d39ae721e"
-  integrity sha512-5U0rVMU5Y2n2+ykNLQqMoqklN9ICBT/KsvC1Gz6vqHbz2AXXGkG+Pm5rMWk/8Vjrr/mY9985Hi8DYzn1F09Nyw==
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -3824,11 +3803,6 @@ issue-regex@^3.1.0:
   resolved "https://registry.yarnpkg.com/issue-regex/-/issue-regex-3.1.0.tgz#0671f094d6449c5b712fac3c9562aecb727d709e"
   integrity sha512-0RHjbtw9QXeSYnIEY5Yrp2QZrdtz21xBDV9C/GIlY2POmgoS6a7qjkYS5siRKXScnuAj5/SPv1C3YForNCHTJA==
 
-iterate-object@^1.3.0, iterate-object@^1.3.1:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/iterate-object/-/iterate-object-1.3.4.tgz#fa50b1d9e58e340a7dd6b4c98c8a5e182e790096"
-  integrity sha512-4dG1D1x/7g8PwHS9aK6QV5V94+ZvyP4+d19qDv43EzImmrndysIl4prmJ1hWWIGCqrZHyaHBm6BSEWHOLnpoNw==
-
 java-properties@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/java-properties/-/java-properties-1.0.2.tgz#ccd1fa73907438a5b5c38982269d0e771fe78211"
@@ -4356,13 +4330,6 @@ map-cache@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
   integrity sha1-wyq9C9ZSXZsFFkW7TyasXcmKDb8=
-
-map-o@^2.0.1:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/map-o/-/map-o-2.0.10.tgz#b656a75cead939a936c338fb5df8c9d55f0dbb23"
-  integrity sha512-BxazE81fVByHWasyXhqKeo2m7bFKYu+ZbEfiuexMOnklXW+tzDvnlTi/JaklEeuuwqcqJzPaf9q+TWptSGXeLg==
-  dependencies:
-    iterate-object "^1.3.0"
 
 map-obj@^1.0.0:
   version "1.0.1"
