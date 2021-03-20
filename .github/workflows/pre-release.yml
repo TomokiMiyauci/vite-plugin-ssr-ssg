@@ -3,9 +3,9 @@ name: pre-release
 on:
   push:
     branches:
-      - alpha
+      - beta
     paths-ignore:
-      - example/**
+      - examples/**
 
 jobs:
   setup:
