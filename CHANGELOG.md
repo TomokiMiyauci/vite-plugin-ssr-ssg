@@ -1,3 +1,15 @@
+# [v1.0.0-alpha.58](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.57...v1.0.0-alpha.58) (2021-03-20)
+
+## ✨ New Features
+- [`b3e6cb7`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/b3e6cb7)  (react) Add template for react 
+
+## 🐛 Bug Fixes
+- [`6cfd0f8`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/6cfd0f8)  (preact) Change ext 
+
+
+
+# [1.0.0-alpha.58](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.57...v1.0.0-alpha.58) (2021-03-20)
+
 # [v1.0.0-alpha.57](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.56...v1.0.0-alpha.57) (2021-03-20)
 
 ## ✨ New Features
