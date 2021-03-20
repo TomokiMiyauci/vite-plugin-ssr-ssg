@@ -597,10 +597,10 @@ util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-vite-plugin-ssr-ssg@^1.0.0-alpha.33:
-  version "1.0.0-alpha.60"
-  resolved "https://registry.yarnpkg.com/vite-plugin-ssr-ssg/-/vite-plugin-ssr-ssg-1.0.0-alpha.60.tgz#9bd8e7eccb35cbdbf2eb9bf452c77e0ed215f4c4"
-  integrity sha512-V6B6cqmV803D0R+TTqiD+y+28ZobuEyhAr6fbFsAEC3LMLWM9NwW0Rm927UPVhjw2Xbztx9J+fBLoup1hzm6MA==
+vite-plugin-ssr-ssg@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ssr-ssg/-/vite-plugin-ssr-ssg-1.0.1.tgz#f935fe662138b049483801fcffe8bbab30ef61c8"
+  integrity sha512-VUKlhb1KYO35s6yWGF/oacR3/9Ixs3K2pTpxEivkeWibIsc5dk/SJ9QgiO59JZWL32W50DpJtY+VpYJHBJ7eVg==
 
 vite@^2.1.0:
   version "2.1.2"

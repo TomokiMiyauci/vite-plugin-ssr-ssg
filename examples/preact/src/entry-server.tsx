@@ -12,4 +12,4 @@ const render: ServerRenderer = async (
   return renderToString(app)
 }
 
-export { render }
+export default render

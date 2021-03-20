@@ -17,4 +17,4 @@ const render: ServerRenderer = async (url, context) => {
   return renderToString(app)
 }
 
-export { render }
+export default render
