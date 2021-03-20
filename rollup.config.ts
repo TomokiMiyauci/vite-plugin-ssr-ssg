@@ -78,10 +78,15 @@ const config = [
       include: 'src/react/*'
     },
 
+    external: ['fs', 'path'],
+
     plugins: [
       typescript({
         tsconfigOverride: {
-          include: ['src/react/*']
+          include: ['src/react/*'],
+          compilerOptions: {
+            rootDir: 'src/react'
+          }
         }
       })
     ]
