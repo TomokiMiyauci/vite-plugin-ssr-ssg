@@ -1,3 +1,12 @@
+# [v1.0.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0...v1.0.1) (2021-03-20)
+
+## 🐛 Bug Fixes
+- [`7082bf5`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/7082bf5)   Change render function interface 
+
+
+
+## [1.0.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0...v1.0.1) (2021-03-20)
+
 # [v1.0.1-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0...v1.0.1-beta.1) (2021-03-20)
 
 ## 🐛 Bug Fixes
