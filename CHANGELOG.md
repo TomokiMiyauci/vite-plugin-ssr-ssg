@@ -1,3 +1,78 @@
+# v1.0.0 (2021-03-20)
+
+## ✨ New Features
+- [`acc9c6f`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/acc9c6f)   Add bin script test 
+- [`4776671`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/4776671)   Add server script 
+- [`8e6b5e4`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/8e6b5e4)   Apply alias 
+- [`9fa9798`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/9fa9798)   Add core logic 
+- [`a0db5e4`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/a0db5e4)   Add args parser 
+- [`56fe571`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/56fe571)   Add detect routing path 
+- [`cb2607d`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/cb2607d)  (react) Add react routes 
+- [`a546023`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/a546023)   Add auto detect routes from pages file 
+- [`01a5828`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/01a5828)   Add dev scripts 
+- [`d08ba07`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/d08ba07)   Add script for preview 
+- [`68335c6`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/68335c6)  (react) Add script for react 
+- [`2658777`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/2658777)  (react) Add routes 
+- [`8f0183d`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/8f0183d)  (preact) Add preact helper 
+- [`331d517`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/331d517)  (preact) Add SSR and SSG commands 
+- [`8104d86`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/8104d86)  (vue3) Add helper for vue3 
+- [`224e13c`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/224e13c)  (vue3) Apply vite ssr and ssg 
+- [`7494b0b`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/7494b0b)   Remove dist when script is starting 
+- [`777f812`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/777f812)   Change output dir structure 
+- [`4100765`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/4100765)   Add preview for CSR mode 
+- [`71af6a0`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/71af6a0)   Improve dev command 
+- [`fbaa846`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/fbaa846)   Merge one command 
+- [`97dbb59`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/97dbb59)   Add commands alias 
+- [`33f2a6c`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/33f2a6c)   Add init command for vue3 ts 
+- [`319572b`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/319572b)   Apply ts and js file 
+- [`d2975fe`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/d2975fe)  (preact) Add template for preact 
+- [`b3e6cb7`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/b3e6cb7)  (react) Add template for react 
+- [`80290f2`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/80290f2)   Add log before initialize 
+
+## 🐛 Bug Fixes
+- [`06f95bc`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/06f95bc)   Fix scripts 
+- [`ea91810`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ea91810)   Add shebang 
+- [`f71cc50`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f71cc50)   Fix resolve path 
+- [`5df8bea`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/5df8bea)   Change path 
+- [`877182a`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/877182a)   Use app root path 
+- [`fd33fe9`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/fd33fe9)   Change outDir 
+- [`6d9928e`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/6d9928e)   Change path to pwd 
+- [`3ed8b2a`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/3ed8b2a)   Remove Suspense 
+- [`4b07f09`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/4b07f09)   Fix relative path 
+- [`7cbea75`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/7cbea75)   Fix import.meta 
+- [`31aff0f`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/31aff0f)   Fix type error 
+- [`94a24c6`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/94a24c6)   Fix import module 
+- [`9fbd450`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/9fbd450)  (react) Fix output options 
+- [`c9912aa`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/c9912aa)  (react) Change getRoutes interface 
+- [`45d7d54`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/45d7d54)  (react) Remove unused 
+- [`d2152fa`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/d2152fa)  (preact) Include preact 
+- [`a7020cf`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/a7020cf)   Upgrade module 
+- [`418b6e9`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/418b6e9)  (react) Import sync 
+- [`ee5b9ae`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ee5b9ae)   Add await 
+- [`409d77c`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/409d77c)   Remove extension 
+- [`94034f5`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/94034f5)  (vue3) Fix return types 
+- [`c0ece29`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/c0ece29)  (vue3) Fix return types 
+- [`0cd69ce`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/0cd69ce)   Fix path verdiction 
+- [`c38863c`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/c38863c)   Fix import syntax 
+- [`b65f8cb`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/b65f8cb)   Wait for client side bundle 
+- [`50d8d11`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/50d8d11)   Await for page pre-loading 
+- [`f3ef0f5`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f3ef0f5)   Apply clean URL 
+- [`a49209b`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/a49209b)   Fix log message 
+- [`ccc0795`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ccc0795)   Remove unused 
+- [`234bcb1`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/234bcb1)   Fix type error 
+- [`fbf9771`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/fbf9771)  (vue3) Adjust style 
+- [`ce0d210`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ce0d210)   Fix import 
+- [`7a41775`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/7a41775)   Fix message 
+- [`d0bdae3`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/d0bdae3)   Change output config 
+- [`efa0eda`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/efa0eda)   Change output config 
+- [`297e104`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/297e104)  (preact) Change ext to jsx 
+- [`6cfd0f8`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/6cfd0f8)  (preact) Change ext 
+- [`2c2fb6e`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/2c2fb6e)   Fix log message 
+
+
+
+# 1.0.0 (2021-03-20)
+
 # v1.0.0-beta.1 (2021-03-20)
 
 ## ✨ New Features
