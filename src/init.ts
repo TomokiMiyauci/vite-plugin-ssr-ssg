@@ -95,7 +95,7 @@ const rewritePackageJson = async (path: string): Promise<void> => {
   console.log(scriptsLog)
   console.log(
     `Initialize is done!
-you should reinstall like with ${CYAN}npm i${RESET} or ${CYAN}yarn${RESET}`
+You should reinstall like with ${CYAN}npm i${RESET} or ${CYAN}yarn${RESET}.`
   )
 }
 
