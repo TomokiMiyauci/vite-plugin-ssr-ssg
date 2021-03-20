@@ -1,3 +1,12 @@
+# [v1.0.0-alpha.59](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.58...v1.0.0-alpha.59) (2021-03-20)
+
+## ✨ New Features
+- [`80290f2`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/80290f2)   Add log before initialize 
+
+
+
+# [1.0.0-alpha.59](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.58...v1.0.0-alpha.59) (2021-03-20)
+
 # [v1.0.0-alpha.58](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.57...v1.0.0-alpha.58) (2021-03-20)
 
 ## ✨ New Features
