@@ -1,85 +1,86 @@
-const entryServer = (
-  isTS: boolean
-): string => `import { createApp } from './entry-client'
-${isTS ? "import { ServerRenderer } from 'vite-plugin-ssr-ssg/vue3'" : ''}
-import { renderToString } from '@vue/server-renderer'
+export const entryClient = `import React from 'react'
+import { hydrate } from 'react-dom'
+import { StrictMode } from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
 
-const render${isTS ? ': ServerRenderer' : ''} = async (url, context) => {
-  const { app, router } = createApp()
+hydrate(
+  <StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>,
+  document.getElementById('root')
+)
+`
 
-  router.push(url)
-  await router.isReady()
+const entryServer = (isTS: boolean): string => `import React from 'react'
+import { renderToString } from 'react-dom/server'
+import { StaticRouter } from 'react-router-dom'
+import App from './App'
+${
+  isTS
+    ? "import type { ServerRenderer } from 'vite-plugin-ssr-ssg/react'\n"
+    : ''
+}
+const render${isTS ? ': ServerRenderer' : ''} = async (
+  url,
+  context
+) => {
+  const app = React.createElement(
+    StaticRouter,
+    {
+      location: url,
+      context
+    },
+    React.createElement(App)
+  )
 
-  return renderToString(app, context)
+  return renderToString(app)
 }
 
 export { render }
 `
 
-const type = `: {
-  app: app<Element>
-  router: Router
-}`
+export const indexTSX = `import React from 'react'
+const Index = () => <div>Home</div>
+export default Index
+`
 
-const entryClient = (isTS: boolean): string => `import App from './App.vue'
-import { createSSRApp${isTS ? ', App as app' : ''} } from 'vue'
-import {
-  createMemoryHistory,
-  createRouter,
-  createWebHistory${isTS ? ',\n  Router' : ''}
-} from 'vue-router'
-import { getRoutes } from 'vite-plugin-ssr-ssg/vue3'
+export const aboutTSX = `import React from 'react'
+const About = () => <div>About</div>
+export default About
+`
 
-const pages = import.meta.globEager('./pages/*.vue')
+const appTSX = (isTS: boolean): string => `import React${
+  isTS ? ', { FC }' : ''
+} from 'react'
+import './App.css'
+import { Route, Switch, Link } from 'react-router-dom'
+import { getRoutes } from 'vite-plugin-ssr-ssg/react'
+
+const pages = import.meta.globEager('./pages/*.${isTS ? 'tsx' : 'jsx'}')
 const routes = getRoutes(pages)
 
-export const createApp = ()${isTS ? type : ''} => {
-  const app = createSSRApp(App)
-  const router = createRouter({
-    history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
-    routes
-  })
-  app.use(router)
-  return { app, router }
+const App${isTS ? ': FC' : ''} = () => {
+  return (
+    <div className="App">
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Switch>
+        {routes.map(({ path, name, Component }) => {
+          return (
+            <Route exact path={path} key={name}>
+              <Component />
+            </Route>
+          )
+        })}
+      </Switch>
+    </div>
+  )
 }
 
-const { app, router } = createApp()
-
-router.isReady().then(() => {
-  app.mount('#app')
-})
+export default App
 `
 
-const indexVue = (isTS: boolean): string => `<template>
-  <div>
-    <router-link to="/about">About</router-link>
-
-    <h1>Index</h1>
-    <p>This is Home page</p>
-    <button @click="count++">{{ count }}</button>
-  </div>
-</template>
-
-<script setup ${isTS ? 'lang="ts"' : ''}>
-import { ref } from 'vue'
-
-const count = ref(0)
-</script>
-`
-
-export { entryClient, entryServer, indexVue }
-
-export const aboutVue = `<template>
-  <div>
-    <router-link to="/">Home</router-link>
-
-    <h1>About</h1>
-    <p>This is about page.</p>
-  </div>
-</template>
-`
-
-export const appVue = `<template>
-  <router-view />
-</template>
-`
+export { entryServer, appTSX }

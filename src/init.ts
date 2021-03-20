@@ -1,7 +1,8 @@
 import { writeFileSync } from 'fs'
 import { loadConfigFromFile } from 'vite'
 import { generateFiles } from './vue3'
-import { generateFiles as genPrectTemplate } from './preact'
+import { generateFiles as genPraectTemplate } from './preact'
+import { generateFiles as genReactTemplate } from './react'
 
 const frameworks = ['react', 'preact', 'vue', 'svelte', 'vanilla'] as const
 const frameworksWithExt = frameworks
@@ -88,7 +89,7 @@ const rewritePackageJson = async (path: string): Promise<void> => {
 
 const detectFramework = (pluginNames: string[]) => {
   if (pluginNames.includes('vite:vue')) return 'VUE'
-  else if (pluginNames.includes('vite:react')) return 'REACT'
+  else if (pluginNames.includes('react-refresh')) return 'REACT'
   else if (pluginNames.includes('preact:config')) return 'PREACT'
   else return 'UNKNOWN'
 }
@@ -118,9 +119,9 @@ const getFrameworkMap = (
 
 const generatorFactory = ({ react, vue, preact, svelte }: FrameworkMap) => {
   if (react) {
-    return () => {}
+    return genReactTemplate
   } else if (preact) {
-    return genPrectTemplate
+    return genPraectTemplate
   } else if (vue) {
     return generateFiles
   } else if (svelte) {
@@ -135,7 +136,9 @@ const getDependency = ({
   svelte
 }: FrameworkMap): Record<string, string> => {
   if (react) {
-    return {}
+    return {
+      'react-dom': '^17.0.0'
+    }
   } else if (preact) {
     return {
       'preact-router': '^3.2.1'
