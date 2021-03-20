@@ -24,6 +24,16 @@ const config = [
     watch: {
       include: 'src/**'
     },
+    external: [
+      'fs',
+      'path',
+      'yargs/yargs',
+      'express',
+      'vite',
+      'compression',
+      'serve-static'
+    ],
+
     plugins: [
       // terser(),
       typescript({ useTsconfigDeclarationDir: false }),
@@ -94,10 +104,15 @@ const config = [
       include: 'src/preact/*'
     },
 
+    external: ['fs', 'path'],
+
     plugins: [
       typescript({
         tsconfigOverride: {
-          include: ['src/preact/*']
+          include: ['src/preact/*'],
+          compilerOptions: {
+            rootDir: 'src/preact'
+          }
         }
       })
     ]
