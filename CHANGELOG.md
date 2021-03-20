@@ -1,3 +1,15 @@
+# [v1.0.0-alpha.57](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.56...v1.0.0-alpha.57) (2021-03-20)
+
+## ✨ New Features
+- [`d2975fe`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/d2975fe)  (preact) Add template for preact 
+
+## 🐛 Bug Fixes
+- [`297e104`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/297e104)  (preact) Change ext to jsx 
+
+
+
+# [1.0.0-alpha.57](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.56...v1.0.0-alpha.57) (2021-03-20)
+
 # [v1.0.0-alpha.56](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0-alpha.55...v1.0.0-alpha.56) (2021-03-19)
 
 ## 🐛 Bug Fixes
