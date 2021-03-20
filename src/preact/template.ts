@@ -34,7 +34,7 @@ const appTSX = (isTS: boolean): string => `${
 }import { Link, Router } from 'preact-router'
 import { getRoutes } from 'vite-plugin-ssr-ssg/preact'
 
-const pages = import.meta.globEager('./pages/*.tsx')
+const pages = import.meta.globEager('./pages/*.${isTS ? 'tsx' : 'jsx'}')
 const routes = getRoutes(pages)
 
 export const App${
