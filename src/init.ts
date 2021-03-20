@@ -3,6 +3,14 @@ import { loadConfigFromFile } from 'vite'
 import { generateFiles } from './vue3'
 import { generateFiles as genPraectTemplate } from './preact'
 import { generateFiles as genReactTemplate } from './react'
+import { RESET, CYAN, GREEN } from './constants'
+
+const scriptsLog = `${CYAN}Add Scripts: ${RESET}-> ${GREEN}package.json${RESET}
+${GREEN}dev${RESET}: vite-ssrg dev
+${GREEN}build${RESET}: vite-ssrg build
+${GREEN}generate${RESET}: vite-ssrg generate
+${GREEN}serve${RESET}: vite-ssrg preview
+`
 
 const frameworks = ['react', 'preact', 'vue', 'svelte', 'vanilla'] as const
 const frameworksWithExt = frameworks
@@ -65,7 +73,6 @@ const rewritePackageJson = async (path: string): Promise<void> => {
     ..._dependencies,
     ...getDependency(frameworkMap)
   }
-  console.log(isTS(_devDependencies), dependencies, frameworkMap)
 
   const devDependencies: Record<string, string> = {
     ..._devDependencies,
@@ -85,6 +92,11 @@ const rewritePackageJson = async (path: string): Promise<void> => {
     encoding: 'utf-8',
     flag: 'w'
   })
+  console.log(scriptsLog)
+  console.log(
+    `Initialize is done!
+you should reinstall like with ${CYAN}npm i${RESET} or ${CYAN}yarn${RESET}`
+  )
 }
 
 const detectFramework = (pluginNames: string[]) => {

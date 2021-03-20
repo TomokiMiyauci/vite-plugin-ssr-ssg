@@ -45,8 +45,6 @@ const rewriteIndexHTML = (path: string, ext: string) => () => {
     .replace(/<div id="app"><\/div>/, '<div id="app"><!--app-html--></div>')
     .replace(`src="/src/main${ext}"`, `src="/src/entry-client${ext}"`)
 
-  console.log(replacedHTML)
-
   writeFileSync(path, replacedHTML, {
     encoding: 'utf-8',
     flag: 'w'
