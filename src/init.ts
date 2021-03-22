@@ -149,7 +149,8 @@ const getDependency = ({
 }: FrameworkMap): Record<string, string> => {
   if (react) {
     return {
-      'react-dom': '^17.0.0'
+      'react-dom': '^17.0.0',
+      'react-head': '^3.4.0'
     }
   } else if (preact) {
     return {
@@ -157,7 +158,8 @@ const getDependency = ({
     }
   } else if (vue) {
     return {
-      'vue-router': '^4.0.5'
+      'vue-router': '^4.0.5',
+      '@vueuse/head': '^0.5.1'
     }
   } else if (svelte) {
     return {}

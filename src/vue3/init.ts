@@ -42,6 +42,7 @@ const rewriteIndexHTML = (path: string, ext: string) => () => {
   const index = readFileSync(path, { encoding: 'utf-8' })
 
   const replacedHTML = index
+    .replace(/<title>.+<\/title>/, '')
     .replace(/<div id="app"><\/div>/, '<div id="app"><!--app-html--></div>')
     .replace(`src="/src/main${ext}"`, `src="/src/entry-client${ext}"`)
 
@@ -63,7 +64,7 @@ const generatePages = (basePath: string, isTS: boolean) => () => {
     encoding: 'utf-8',
     flag: 'w'
   })
-  writeFileSync(join(basePath, 'About.vue'), aboutVue, {
+  writeFileSync(join(basePath, 'About.vue'), aboutVue(isTS), {
     encoding: 'utf-8',
     flag: 'w'
   })

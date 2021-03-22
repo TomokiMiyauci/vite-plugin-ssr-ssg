@@ -32,7 +32,10 @@ const runSSR = async (options?: SSROptions): Promise<void> => {
     recursive: true,
     force: true
   })
-  await clientBuildRun(join(outDir, options?.outDirClient ?? 'client'))()
+  await clientBuildRun(
+    join(outDir, options?.outDirClient ?? 'client'),
+    options?.build?.ssrManifest
+  )()
   await serverBuildRun(join(outDir, options?.outDirServer ?? 'server'))()
 }
 

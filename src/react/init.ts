@@ -42,6 +42,7 @@ const rewriteIndexHTML = (path: string, ext: string) => () => {
   const index = readFileSync(path, { encoding: 'utf-8' })
 
   const replacedHTML = index
+    .replace(/<title>.+<\/title>/, '')
     .replace(/<div id="root"><\/div>/, '<div id="root"><!--app-html--></div>')
     .replace(`src="/src/main${ext}"`, `src="/src/entry-client${ext}"`)
 
@@ -51,7 +52,7 @@ const rewriteIndexHTML = (path: string, ext: string) => () => {
   })
 }
 
-const rewriteAppVue = (path: string, isTS: boolean) => () => {
+const rewriteAppTSX = (path: string, isTS: boolean) => () => {
   writeFileSync(path, appTSX(isTS), {
     encoding: 'utf-8',
     flag: 'w'
@@ -81,7 +82,7 @@ const generateFiles = (isTS: boolean): void => {
     rewriteClientConfig(oldPath),
     rewriteIndexHTML(toRootAbsolute('index.html'), ext),
     generatePages(basePage, ext),
-    rewriteAppVue(toRootAbsolute('src', `app${ext}`), isTS)
+    rewriteAppTSX(toRootAbsolute('src', `app${ext}`), isTS)
   ]
   fns.forEach((fn) => fn())
 
