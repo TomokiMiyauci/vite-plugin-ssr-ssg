@@ -1,9 +1,13 @@
 import { build } from 'vite'
 
-export const run = (outDir: string) => async (): Promise<void> => {
+export const run = (
+  outDir: string,
+  ssrManifest?: boolean
+) => async (): Promise<void> => {
   await build({
     build: {
-      outDir
+      outDir,
+      ssrManifest
     }
   })
 }

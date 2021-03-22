@@ -157,7 +157,8 @@ const getDependency = ({
     }
   } else if (vue) {
     return {
-      'vue-router': '^4.0.5'
+      'vue-router': '^4.0.5',
+      '@vueuse/head': '^0.5.1'
     }
   } else if (svelte) {
     return {}

@@ -2,6 +2,7 @@ import { writeFileSync, readFileSync } from 'fs'
 import { toRootAbsolute, getRoutePaths } from './utils'
 import { join } from 'path'
 import { CYAN, GREEN, RESET, GRAY } from './constants'
+import { Render } from './types'
 
 interface Options {
   outDir?: string
@@ -13,7 +14,9 @@ const run = async (options?: Options) => {
     options?.outDir ?? 'dist',
     options?.outDirServer ?? 'server',
     'entry-server'
-  ))
+  )) as {
+    default: Render
+  }
   const template = readFileSync(
     toRootAbsolute(options?.outDir ?? 'dist', 'index.html'),
     'utf-8'
@@ -25,8 +28,12 @@ const run = async (options?: Options) => {
 
   await Promise.all(
     pages.map(async (url) => {
-      const appHtml = await render(url, {})
-      const html = template.replace(`<!--app-html-->`, appHtml)
+      const { bodyTags, headTags, htmlAttrs, bodyAttrs } = await render(url, {})
+      const html = template
+        .replace('<html', `<html ${htmlAttrs} `)
+        .replace('<body', `<body ${bodyAttrs} `)
+        .replace('</head>', `${headTags}\n</head>`)
+        .replace(`<!--app-html-->`, bodyTags)
       const filePath = join(
         options?.outDir ?? 'dist',
         options?.outDirClient ?? '',

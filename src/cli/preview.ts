@@ -4,6 +4,7 @@ import { toRootAbsolute } from '../utils'
 import { existsSync } from 'fs'
 import compression from 'compression'
 import { CYAN, GREEN, RESET, YELLOW } from '../constants'
+import { Render } from '../types'
 
 type Mode = 'CSR' | 'SSR' | 'UNKNOWN'
 
@@ -35,9 +36,14 @@ const createServer = async (): Promise<{
       toRootAbsolute('dist', 'client', 'index.html'),
       'utf-8'
     )
+    const {
+      default: ssrManifest
+    }: { default: Record<string, string[]> } = await import(
+      toRootAbsolute('dist', 'client', 'ssr-manifest.json')
+    )
     const { default: render } = await (import(
       toRootAbsolute('dist', 'server', 'entry-server')
-    ) as any)
+    ) as Promise<{ default: Render }>)
 
     app.use(
       await (await import('serve-static')).default(
@@ -49,13 +55,20 @@ const createServer = async (): Promise<{
     )
     app.use('*', async ({ originalUrl }, res) => {
       const context = {} as { url: string }
-      const appHtml = await render(originalUrl, context)
+      const { bodyAttrs, headTags, bodyTags, htmlAttrs } = await render(
+        originalUrl,
+        ssrManifest
+      )
 
       if (context.url) {
         return res.redirect(301, context.url)
       }
 
-      const html = template?.replace(`<!--app-html-->`, appHtml) ?? ''
+      const html = template
+        .replace('<html', `<html ${htmlAttrs} `)
+        .replace('<body', `<body ${bodyAttrs} `)
+        .replace('</head>', `${headTags}\n</head>`)
+        .replace(`<!--app-html-->`, bodyTags)
 
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
     })

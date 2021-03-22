@@ -1,16 +1,28 @@
 const entryServer = (
   isTS: boolean
 ): string => `import { createApp } from './entry-client'
-${isTS ? "import { ServerRenderer } from 'vite-plugin-ssr-ssg/vue3'" : ''}
+${isTS ? "import { ServerRenderer } from 'vite-plugin-ssr-ssg'" : ''}
 import { renderToString } from '@vue/server-renderer'
+import { renderHeadToString } from '@vueuse/head'
 
 const render${isTS ? ': ServerRenderer' : ''} = async (url, context) => {
-  const { app, router } = createApp()
+  const { app, router, head } = createApp()
 
   router.push(url)
   await router.isReady()
 
-  return renderToString(app, context)
+  const context = {} as { modules: Set<string> }
+  const html = await renderToString(app, context)
+
+  // const preloadLinks = renderPreloadLinks(context.modules, manifest)
+  const { headTags, htmlAttrs, bodyAttrs } = renderHeadToString(head)
+
+  return {
+    bodyTags: html,
+    headTags,
+    htmlAttrs,
+    bodyAttrs
+  }
 }
 
 export default render
@@ -19,6 +31,7 @@ export default render
 const type = `: {
   app: app<Element>
   router: Router
+  head: HeadClient
 }`
 
 const entryClient = (isTS: boolean): string => `import App from './App.vue'
@@ -29,6 +42,7 @@ import {
   createWebHistory${isTS ? ',\n  Router' : ''}
 } from 'vue-router'
 import { getRoutes } from 'vite-plugin-ssr-ssg/vue3'
+import { createHead${isTS ? ', HeadClient' : ''} } from '@vueuse/head'
 
 const pages = import.meta.globEager('./pages/*.vue')
 const routes = getRoutes(pages)
@@ -39,8 +53,9 @@ export const createApp = ()${isTS ? type : ''} => {
     history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
     routes
   })
-  app.use(router)
-  return { app, router }
+  const head = createHead()
+  app.use(router).use(head)
+  return { app, router, head }
 }
 
 const { app, router } = createApp()

@@ -41,7 +41,10 @@ yargs(hideBin(process.argv))
     ({ outDirClient, outDirServer }) =>
       runSSR({
         outDirClient,
-        outDirServer
+        outDirServer,
+        build: {
+          ssrManifest: true
+        }
       })
   )
   .command(
