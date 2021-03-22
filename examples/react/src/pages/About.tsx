@@ -1,3 +1,11 @@
 import React from 'react'
-const About = () => <div>About</div>
+import { Title } from 'react-head'
+
+const About = () => (
+  <div>
+    <h1>About</h1>
+
+    <Title>About</Title>
+  </div>
+)
 export default About

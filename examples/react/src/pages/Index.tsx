@@ -1,3 +1,11 @@
 import React from 'react'
-const Index = () => <div>Home</div>
+import { Title } from 'react-head'
+
+const Index = () => (
+  <div>
+    <h1>Home</h1>
+
+    <Title>Home</Title>
+  </div>
+)
 export default Index
