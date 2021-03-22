@@ -18,9 +18,9 @@
   "author": "TomokiMiyauci <development.operation.6.6.6@gmail.com>",
   "scripts": {
     "build": "rollup -c rollup.config.ts",
+    "test": "jest",
     "commit": "cz",
-    "prepare": "husky install",
-    "prepublishOnly": "yarn build"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
