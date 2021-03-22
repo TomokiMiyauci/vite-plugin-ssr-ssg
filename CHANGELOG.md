@@ -1,3 +1,12 @@
+# [v1.1.0-beta.3](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2021-03-22)
+
+## ✨ New Features
+- [`2f4622f`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/2f4622f)  (react) Add react-head template 
+
+
+
+# [1.1.0-beta.3](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2021-03-22)
+
 # [v1.1.0-beta.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2021-03-22)
 
 ## 🐛 Bug Fixes
