@@ -1,3 +1,16 @@
+# [v1.1.0](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.1...v1.1.0) (2021-03-22)
+
+## ✨ New Features
+- [`ea22fb4`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ea22fb4)  (vue3) Add head pre-render test 
+- [`2f4622f`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/2f4622f)  (react) Add react-head template 
+
+## 🐛 Bug Fixes
+- [`4a8da9e`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/4a8da9e)  (vue3) Remove title from template 
+
+
+
+# [1.1.0](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.1...v1.1.0) (2021-03-22)
+
 # [v1.1.0-beta.3](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2021-03-22)
 
 ## ✨ New Features
