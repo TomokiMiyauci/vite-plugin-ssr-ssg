@@ -5,13 +5,13 @@ ${isTS ? "import { ServerRenderer } from 'vite-plugin-ssr-ssg'" : ''}
 import { renderToString } from '@vue/server-renderer'
 import { renderHeadToString } from '@vueuse/head'
 
-const render${isTS ? ': ServerRenderer' : ''} = async (url, context) => {
+const render${isTS ? ': ServerRenderer' : ''} = async (url, manifest) => {
   const { app, router, head } = createApp()
 
   router.push(url)
   await router.isReady()
 
-  const context = {} as { modules: Set<string> }
+  const context = {}${isTS ? ' as { modules: Set<string> }' : ''}
   const html = await renderToString(app, context)
 
   // const preloadLinks = renderPreloadLinks(context.modules, manifest)
@@ -75,8 +75,13 @@ const indexVue = (isTS: boolean): string => `<template>
   </div>
 </template>
 
-<script setup ${isTS ? 'lang="ts"' : ''}>
+<script setup${isTS ? ' lang="ts"' : ''}>
 import { ref } from 'vue'
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'Index'
+})
 
 const count = ref(0)
 </script>
@@ -84,7 +89,7 @@ const count = ref(0)
 
 export { entryClient, entryServer, indexVue }
 
-export const aboutVue = `<template>
+export const aboutVue = (isTS: boolean): string => `<template>
   <div>
     <router-link to="/">Home</router-link>
 
@@ -92,6 +97,14 @@ export const aboutVue = `<template>
     <p>This is about page.</p>
   </div>
 </template>
+
+<script setup${isTS ? ' lang="ts"' : ''}>
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'About'
+})
+</script>
 `
 
 export const appVue = `<template>
