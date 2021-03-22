@@ -1,3 +1,12 @@
+# [v1.1.0-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.1...v1.1.0-beta.1) (2021-03-22)
+
+## ✨ New Features
+- [`ea22fb4`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/ea22fb4)  (vue3) Add head pre-render test 
+
+
+
+# [1.1.0-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.1...v1.1.0-beta.1) (2021-03-22)
+
 # [v1.0.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.0...v1.0.1) (2021-03-20)
 
 ## 🐛 Bug Fixes
