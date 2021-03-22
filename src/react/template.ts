@@ -2,13 +2,16 @@ export const entryClient = `import React from 'react'
 import { hydrate } from 'react-dom'
 import { StrictMode } from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import { HeadProvider } from 'react-head'
 import App from './App'
 
 hydrate(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <HeadProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </HeadProvider>
   </StrictMode>,
   document.getElementById('root')
 )
@@ -18,37 +21,50 @@ const entryServer = (isTS: boolean): string => `import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from './App'
-${
-  isTS
-    ? "import type { ServerRenderer } from 'vite-plugin-ssr-ssg/react'\n"
-    : ''
-}
-const render${isTS ? ': ServerRenderer' : ''} = async (
-  url,
-  context
-) => {
-  const app = React.createElement(
-    StaticRouter,
-    {
-      location: url,
-      context
-    },
-    React.createElement(App)
+${isTS ? "import type { ServerRenderer } from 'vite-plugin-ssr-ssg'\n" : ''}
+import { HeadProvider } from 'react-head'
+
+const render${isTS ? ': ServerRenderer' : ''} = async (url, manifest) => {
+  const headTags = []${isTS ? ' as any' : ''}
+  const context = {}
+
+  const body = renderToString(
+    <HeadProvider headTags={headTags}>
+      <StaticRouter location={url} context={context}>
+        <App />
+      </StaticRouter>
+    </HeadProvider>
   )
 
-  return renderToString(app)
+  return { bodyTags: body, headTags: renderToString(headTags) }
 }
 
 export default render
 `
 
 export const indexTSX = `import React from 'react'
-const Index = () => <div>Home</div>
+import { Title } from 'react-head'
+
+const Index = () => (
+  <div>
+    <h1>Home</h1>
+
+    <Title>Home</Title>
+  </div>
+)
 export default Index
 `
 
 export const aboutTSX = `import React from 'react'
-const About = () => <div>About</div>
+import { Title } from 'react-head'
+
+const About = () => (
+  <div>
+    <h1>About</h1>
+
+    <Title>About</Title>
+  </div>
+)
 export default About
 `
 

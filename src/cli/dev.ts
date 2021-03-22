@@ -40,9 +40,9 @@ const createServer = async (
 
     const template = await vite.transformIndexHtml(originalUrl, index)
     const html = template
-      .replace('<html', `<html ${htmlAttrs} `)
-      .replace('<body', `<body ${bodyAttrs} `)
-      .replace('</head>', `${headTags}\n</head>`)
+      .replace('<html', `<html ${htmlAttrs ?? ''}`)
+      .replace('<body', `<body ${bodyAttrs ?? ''}`)
+      .replace('</head>', `${headTags ?? ''}\n</head>`)
       .replace(`<!--app-html-->`, bodyTags)
 
     res.status(200).set({ 'Content-Type': 'text/html' }).end(html)

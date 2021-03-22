@@ -30,9 +30,9 @@ const run = async (options?: Options) => {
     pages.map(async (url) => {
       const { bodyTags, headTags, htmlAttrs, bodyAttrs } = await render(url, {})
       const html = template
-        .replace('<html', `<html ${htmlAttrs} `)
-        .replace('<body', `<body ${bodyAttrs} `)
-        .replace('</head>', `${headTags}\n</head>`)
+        .replace('<html', `<html ${htmlAttrs ?? ''}`)
+        .replace('<body', `<body ${bodyAttrs ?? ''}`)
+        .replace('</head>', `${headTags ?? ''}\n</head>`)
         .replace(`<!--app-html-->`, bodyTags)
       const filePath = join(
         options?.outDir ?? 'dist',

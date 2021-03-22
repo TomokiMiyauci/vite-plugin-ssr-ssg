@@ -3,7 +3,7 @@ export type Render = (
   manifest: Record<string, string[] | undefined>
 ) => Promise<{
   bodyTags: string
-  headTags: string
-  htmlAttrs: string
+  headTags?: string
+  htmlAttrs?: string
   bodyAttrs?: string
 }>
