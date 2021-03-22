@@ -1,3 +1,12 @@
+# [v1.1.0-beta.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2021-03-22)
+
+## 🐛 Bug Fixes
+- [`4a8da9e`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/4a8da9e)  (vue3) Remove title from template 
+
+
+
+# [1.1.0-beta.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2021-03-22)
+
 # [v1.1.0-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.1...v1.1.0-beta.1) (2021-03-22)
 
 ## ✨ New Features
