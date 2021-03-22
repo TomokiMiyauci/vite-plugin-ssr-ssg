@@ -1,3 +1,12 @@
+# [v1.2.0-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0...v1.2.0-beta.1) (2021-03-22)
+
+## ✨ New Features
+- [`bcb5915`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/bcb5915)  (vue3) Add dynamic route parser 
+
+
+
+# [1.2.0-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0...v1.2.0-beta.1) (2021-03-22)
+
 # [v1.1.0](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.1...v1.1.0) (2021-03-22)
 
 ## ✨ New Features
