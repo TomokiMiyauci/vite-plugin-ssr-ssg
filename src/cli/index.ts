@@ -5,6 +5,7 @@ import { run as runPreview } from './preview'
 import { runSSG, runSSR } from '../runner'
 import { rewritePackageJson } from '../init'
 import { toRootAbsolute } from '../utils'
+import { resolveConfig } from 'vite'
 
 yargs(hideBin(process.argv))
   .command(
@@ -38,14 +39,14 @@ yargs(hideBin(process.argv))
         describe: 'server side outputs directory',
         default: undefined
       }),
-    ({ outDirClient, outDirServer }) =>
-      runSSR({
-        outDirClient,
-        outDirServer,
-        build: {
-          ssrManifest: true
-        }
-      })
+    async ({ outDirClient, outDirServer }) => {
+      const config = await resolveConfig({}, 'build')
+      console.log(outDirClient, outDirServer, config)
+
+      // const build = {...config.build, ssrManifest: true  }
+      // config.build = build
+      return runSSR(config)
+    }
   )
   .command(
     'generate',
@@ -58,11 +59,11 @@ yargs(hideBin(process.argv))
         describe: 'server side outputs directory',
         default: undefined
       }),
-    ({ outDirClient, outDirServer }) =>
-      runSSG({
-        outDirClient,
-        outDirServer
-      })
+    async ({ outDirClient, outDirServer }) => {
+      console.log(outDirClient, outDirServer)
+      const config = await resolveConfig({}, 'build')
+      return runSSG(config)
+    }
   )
   .command(
     'preview',

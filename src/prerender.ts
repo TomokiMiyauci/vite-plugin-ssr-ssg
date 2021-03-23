@@ -2,27 +2,28 @@ import { writeFileSync, readFileSync } from 'fs'
 import { toRootAbsolute, getRoutePaths } from './utils'
 import { join } from 'path'
 import { CYAN, GREEN, RESET, GRAY } from './constants'
-import { Render } from './types'
+import { Render, PluginOptions } from './types'
+import { ResolvedConfig } from 'vite'
 
-interface Options {
-  outDir?: string
-  outDirClient?: string
-  outDirServer?: string
-}
+type Options = ResolvedConfig & Partial<{ ssrgOptions: PluginOptions }>
 const run = async (options?: Options) => {
   const { default: render } = require(toRootAbsolute(
-    options?.outDir ?? 'dist',
-    options?.outDirServer ?? 'server',
+    options?.build?.outDir ?? 'dist',
+    options?.ssrgOptions?.build?.outDirServer ?? 'server',
     'entry-server'
   )) as {
     default: Render
   }
   const template = readFileSync(
-    toRootAbsolute(options?.outDir ?? 'dist', 'index.html'),
+    toRootAbsolute(options?.build?.outDir ?? 'dist', 'index.html'),
     'utf-8'
   )
 
-  const pages = getRoutePaths()
+  const _pages = getRoutePaths()
+  const pages: string[] = [
+    ..._pages,
+    ...(options?.ssrgOptions?.generate?.routes || [])
+  ]
 
   console.log(`\n${CYAN}vite-plugin-ssr-ssg ${GREEN}pre-rendered:${RESET}\n`)
 
@@ -35,15 +36,15 @@ const run = async (options?: Options) => {
         .replace('</head>', `${headTags ?? ''}\n</head>`)
         .replace(`<!--app-html-->`, bodyTags)
       const filePath = join(
-        options?.outDir ?? 'dist',
-        options?.outDirClient ?? '',
+        options?.build?.outDir ?? 'dist',
+        options?.ssrgOptions?.build?.outDirClient ?? '',
         `${url === '/' ? 'index' : url}.html`
       )
       writeFileSync(toRootAbsolute(filePath), html)
       console.log(
         `${GRAY}${join(
-          options?.outDir ?? 'dist',
-          options?.outDirClient ?? '',
+          options?.build?.outDir ?? 'dist',
+          options?.ssrgOptions?.build?.outDirClient ?? '',
           '/'
         )}${GREEN}${url === '/' ? 'index' : url.slice(1)}.html${RESET}`
       )

@@ -1,24 +1,26 @@
 import { run as clientBuildRun } from './build-client'
 import { run as serverBuildRun } from './build-server'
 import { run as prerenderRun } from './prerender'
-import { UserConfig } from 'vite'
+import { ResolvedConfig } from 'vite'
 import { rmSync } from 'fs'
+import { PluginOptions } from './types'
 
 import { join } from 'path'
 
-interface CustomOptions {
-  outDirClient: string
-  outDirServer: string
-}
-
-type SSROptions = UserConfig & Partial<CustomOptions>
+type SSROptions = ResolvedConfig & Partial<{ ssrgOptions: PluginOptions }>
 type SSGOptions = SSROptions
 
 const runSSG = async (options?: SSGOptions): Promise<void> => {
-  await runSSR({ ...options, outDirClient: '' })
+  if (options?.ssrgOptions && options.ssrgOptions.build) {
+    options.ssrgOptions.build.outDirClient = ''
+  }
+  await runSSR(options)
   await prerenderRun(options)
   rmSync(
-    join(options?.build?.outDir ?? 'dist', options?.outDirServer ?? 'server'),
+    join(
+      options?.build?.outDir ?? 'dist',
+      options?.ssrgOptions?.build.outDirServer ?? 'server'
+    ),
     {
       recursive: true,
       force: true
@@ -32,11 +34,14 @@ const runSSR = async (options?: SSROptions): Promise<void> => {
     recursive: true,
     force: true
   })
+
   await clientBuildRun(
-    join(outDir, options?.outDirClient ?? 'client'),
+    join(outDir, options?.ssrgOptions?.build?.outDirClient ?? 'client'),
     options?.build?.ssrManifest
   )()
-  await serverBuildRun(join(outDir, options?.outDirServer ?? 'server'))()
+  await serverBuildRun(
+    join(outDir, options?.ssrgOptions?.build?.outDirServer ?? 'server')
+  )()
 }
 
 export { runSSR, runSSG }

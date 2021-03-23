@@ -5,15 +5,14 @@ import type { PluginOptions } from './types'
 
 declare module 'vite' {
   interface UserConfig {
-    ssrgOptions?: PluginOptions
+    ssrgOptions?: Partial<PluginOptions>
   }
 }
 
-const plugin = (config?: PluginOptions): Plugin => {
+const plugin = (config?: Partial<PluginOptions>): Plugin => {
   return {
     config: (userConfig) => {
       userConfig.ssrgOptions = config
-      return userConfig
     },
     name: NAME
   }
