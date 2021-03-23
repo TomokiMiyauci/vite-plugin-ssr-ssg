@@ -1,3 +1,12 @@
+# [v1.2.0-beta.10](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.9...v1.2.0-beta.10) (2021-03-23)
+
+## ✨ New Features
+- [`707ce96`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/707ce96)   Add cross framework getRoutes function 
+
+
+
+# [1.2.0-beta.10](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.9...v1.2.0-beta.10) (2021-03-23)
+
 # [v1.2.0-beta.9](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.8...v1.2.0-beta.9) (2021-03-23)
 
 ## ✨ New Features
