@@ -1,3 +1,25 @@
+# [v1.2.0](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0...v1.2.0) (2021-03-23)
+
+## ✨ New Features
+- [`bcb5915`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/bcb5915)  (vue3) Add dynamic route parser 
+- [`843aac4`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/843aac4)   Add plugin interface 
+- [`92f3ed2`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/92f3ed2)   Change option interface 
+- [`9dee9e9`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/9dee9e9)   Add dynamic routes for generation 
+- [`5bf57e4`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/5bf57e4)   Accept async function to generate routes option 
+- [`01af800`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/01af800)  (react) Add dynamic router parser for react routes 
+- [`eb2398d`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/eb2398d)  (preact) Add dynamic route parser for preact 
+- [`707ce96`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/707ce96)   Add cross framework getRoutes function 
+
+## 🐛 Bug Fixes
+- [`a269c09`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/a269c09)   Add commit 
+- [`d66e831`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/d66e831)   Change plugin interface 
+- [`f97c427`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f97c427)   Fix type error 
+- [`21ffc18`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/21ffc18)   Fix cli option 
+
+
+
+# [1.2.0](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0...v1.2.0) (2021-03-23)
+
 # [v1.2.0-beta.10](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.9...v1.2.0-beta.10) (2021-03-23)
 
 ## ✨ New Features
