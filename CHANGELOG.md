@@ -1,3 +1,12 @@
+# [v1.2.0-beta.8](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.7...v1.2.0-beta.8) (2021-03-23)
+
+## ✨ New Features
+- [`01af800`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/01af800)  (react) Add dynamic router parser for react routes 
+
+
+
+# [1.2.0-beta.8](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.7...v1.2.0-beta.8) (2021-03-23)
+
 # [v1.2.0-beta.7](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.6...v1.2.0-beta.7) (2021-03-23)
 
 ## ✨ New Features
