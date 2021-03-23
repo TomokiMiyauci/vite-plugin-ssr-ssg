@@ -57,6 +57,7 @@ const config = [
     watch: {
       include: 'src/**'
     },
+    external: ['fs', 'path'],
 
     plugins: [typescript({ useTsconfigDeclarationDir: false })]
   },
