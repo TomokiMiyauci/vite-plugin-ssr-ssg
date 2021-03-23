@@ -31,7 +31,9 @@ const config = [
       'express',
       'vite',
       'compression',
-      'serve-static'
+      'serve-static',
+      'fs-extra',
+      'consola'
     ],
 
     plugins: [
