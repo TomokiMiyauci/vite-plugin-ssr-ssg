@@ -1,6 +1,6 @@
 import { RouteComponent, RouteRecordRaw } from 'vue-router'
 
-const bracketRegex = /\[.+\]\..+/
+const bracketRegex = /\[.+\]\..+$/
 
 const path2RouteObject = (
   path: string

@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 import { readdirSync } from 'fs'
 import { PIPED_EXTENSIONS } from './constants'
+import { bracketRegex } from './vue3/routes'
 
 const toRootAbsolute = (...path: string[]): string =>
   resolve(process.env.PWD || '', ...path)
@@ -20,9 +21,35 @@ const getExtension = (isTS: boolean, x?: boolean): string => {
 const getRoutePaths = (): string[] => {
   const pageFileNames = readdirSync(toRootAbsolute('src', 'pages'))
   const routePaths = pageFileNames
-    .filter((page) => extensions.test(page))
+    .filter((page) => extensions.test(page) && !bracketRegex.test(page))
     .map((page) => getPath(page))
   return routePaths
 }
 
-export { getRoutePaths, toRootAbsolute, getExtension }
+const renderPreloadLinks = (
+  modules: Set<string>,
+  manifest: Record<string, string[] | undefined>
+): string => {
+  const links = [...modules]
+    .map((id) => {
+      const files = manifest[id]
+      if (!!files && files.length) {
+        return files.map((file) => renderPreloadLink(file))
+      } else return ''
+    })
+    .flat()
+    .filter((link) => !!link)
+  return [...new Set(links)].join()
+}
+
+const renderPreloadLink = (file: string): string => {
+  if (file.endsWith('.js')) {
+    return `<link rel="modulepreload" crossorigin href="${file}">`
+  } else if (file.endsWith('.css')) {
+    return `<link rel="stylesheet" href="${file}">`
+  } else {
+    return ''
+  }
+}
+
+export { getRoutePaths, toRootAbsolute, getExtension, renderPreloadLinks }
