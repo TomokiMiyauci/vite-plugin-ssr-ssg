@@ -9,7 +9,7 @@ declare module 'vite' {
   }
 }
 
-const plugin = (config: PluginOptions): Plugin => {
+const plugin = (config?: PluginOptions): Plugin => {
   return {
     config: (userConfig) => {
       userConfig.ssrgOptions = config
