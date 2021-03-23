@@ -1,3 +1,15 @@
+# [v1.2.0-beta.4](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2021-03-23)
+
+## ✨ New Features
+- [`92f3ed2`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/92f3ed2)   Change option interface 
+
+## 🐛 Bug Fixes
+- [`f97c427`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f97c427)   Fix type error 
+
+
+
+# [1.2.0-beta.4](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2021-03-23)
+
 # [v1.2.0-beta.3](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2021-03-23)
 
 ## 🐛 Bug Fixes
