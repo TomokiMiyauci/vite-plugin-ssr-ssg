@@ -10,6 +10,11 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'Index'
+})
 
 const count = ref(0)
 </script>

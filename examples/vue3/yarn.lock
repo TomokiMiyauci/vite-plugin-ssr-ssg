@@ -112,6 +112,11 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.0.7.tgz#96d52988efc07444c108c7c6803ba7cc93e40045"
   integrity sha512-dn5FyfSc4ky424jH4FntiHno7Ss5yLkqKNmM/NXwANRnlkmqu74pnGetexDFVG5phMk9/FhwovUZCWGxsotVKg==
 
+"@vueuse/head@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.5.1.tgz#7d8a31ba4d214fff75c1d0845148d7f0bdf5b68f"
+  integrity sha512-xt6qgtItb4z/7vp664opQc0c2+ZoU9itMfvpmg4+h0uJcEnhl7LYxO4V+G8H7EVki7SyXDIFMfoCiCFaJrArmg==
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
@@ -598,9 +603,9 @@ util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
 vite-plugin-ssr-ssg@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-ssr-ssg/-/vite-plugin-ssr-ssg-1.0.1.tgz#f935fe662138b049483801fcffe8bbab30ef61c8"
-  integrity sha512-VUKlhb1KYO35s6yWGF/oacR3/9Ixs3K2pTpxEivkeWibIsc5dk/SJ9QgiO59JZWL32W50DpJtY+VpYJHBJ7eVg==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ssr-ssg/-/vite-plugin-ssr-ssg-1.1.0.tgz#dba37ddbdac1ec89e329e393c4ec2bdcf7921370"
+  integrity sha512-LjCa2Gue20MQuoYuA3WdwW5XHk+WXmoBnZKBy4phgaU29txIu1tNouFkyAJLEEL2lX+qnyjjGiLmr5vjV9MIyQ==
 
 vite@^2.1.0:
   version "2.1.2"

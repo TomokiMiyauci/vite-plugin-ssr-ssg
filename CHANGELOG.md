@@ -1,3 +1,99 @@
+# [v1.2.0-beta.10](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.9...v1.2.0-beta.10) (2021-03-23)
+
+## ✨ New Features
+- [`707ce96`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/707ce96)   Add cross framework getRoutes function 
+
+
+
+# [1.2.0-beta.10](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.9...v1.2.0-beta.10) (2021-03-23)
+
+# [v1.2.0-beta.9](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.8...v1.2.0-beta.9) (2021-03-23)
+
+## ✨ New Features
+- [`eb2398d`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/eb2398d)  (preact) Add dynamic route parser for preact 
+
+
+
+# [1.2.0-beta.9](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.8...v1.2.0-beta.9) (2021-03-23)
+
+# [v1.2.0-beta.8](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.7...v1.2.0-beta.8) (2021-03-23)
+
+## ✨ New Features
+- [`01af800`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/01af800)  (react) Add dynamic router parser for react routes 
+
+
+
+# [1.2.0-beta.8](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.7...v1.2.0-beta.8) (2021-03-23)
+
+# [v1.2.0-beta.7](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.6...v1.2.0-beta.7) (2021-03-23)
+
+## ✨ New Features
+- [`5bf57e4`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/5bf57e4)   Accept async function to generate routes option 
+
+
+
+# [1.2.0-beta.7](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.6...v1.2.0-beta.7) (2021-03-23)
+
+# [v1.2.0-beta.6](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.5...v1.2.0-beta.6) (2021-03-23)
+
+## ✨ New Features
+- [`9dee9e9`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/9dee9e9)   Add dynamic routes for generation 
+
+
+
+# [1.2.0-beta.6](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.5...v1.2.0-beta.6) (2021-03-23)
+
+# [v1.2.0-beta.5](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2021-03-23)
+
+## 🐛 Bug Fixes
+- [`21ffc18`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/21ffc18)   Fix cli option 
+
+
+
+# [1.2.0-beta.5](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2021-03-23)
+
+# [v1.2.0-beta.4](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2021-03-23)
+
+## ✨ New Features
+- [`92f3ed2`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/92f3ed2)   Change option interface 
+
+## 🐛 Bug Fixes
+- [`f97c427`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f97c427)   Fix type error 
+
+
+
+# [1.2.0-beta.4](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2021-03-23)
+
+# [v1.2.0-beta.3](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2021-03-23)
+
+## 🐛 Bug Fixes
+- [`d66e831`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/d66e831)   Change plugin interface 
+
+
+
+# [1.2.0-beta.3](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2021-03-23)
+
+# [v1.2.0-beta.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2021-03-23)
+
+## ✨ New Features
+- [`843aac4`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/843aac4)   Add plugin interface 
+
+## 🐛 Bug Fixes
+- [`a269c09`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/a269c09)   Add commit 
+
+
+
+# [1.2.0-beta.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2021-03-23)
+
+# [v1.2.0-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0...v1.2.0-beta.1) (2021-03-22)
+
+## ✨ New Features
+- [`bcb5915`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/bcb5915)  (vue3) Add dynamic route parser 
+
+
+
+# [1.2.0-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.1.0...v1.2.0-beta.1) (2021-03-22)
+
 # [v1.1.0](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.0.1...v1.1.0) (2021-03-22)
 
 ## ✨ New Features

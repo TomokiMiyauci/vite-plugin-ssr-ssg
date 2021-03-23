@@ -7,3 +7,19 @@ export type Render = (
   htmlAttrs?: string
   bodyAttrs?: string
 }>
+
+interface BuildOptions {
+  outDirClient: string
+  outDirServer: string
+}
+
+export type RoutesOption = string[] | (() => Promise<string[]>)
+
+interface GenerateOptions {
+  routes: RoutesOption
+}
+
+export interface PluginOptions {
+  build: Partial<BuildOptions>
+  generate: Partial<GenerateOptions>
+}

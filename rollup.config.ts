@@ -31,7 +31,9 @@ const config = [
       'express',
       'vite',
       'compression',
-      'serve-static'
+      'serve-static',
+      'fs-extra',
+      'consola'
     ],
 
     plugins: [
@@ -57,6 +59,7 @@ const config = [
     watch: {
       include: 'src/**'
     },
+    external: ['fs', 'path'],
 
     plugins: [typescript({ useTsconfigDeclarationDir: false })]
   },

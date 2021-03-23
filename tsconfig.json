@@ -12,7 +12,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client", "node"],
+    "types": ["vite/client", "node", "jest"],
     "sourceMap": true,
     "declaration": true,
     "outDir": "dist",
