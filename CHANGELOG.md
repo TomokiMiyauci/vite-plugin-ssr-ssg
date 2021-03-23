@@ -1,3 +1,12 @@
+# [v1.2.0-beta.6](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.5...v1.2.0-beta.6) (2021-03-23)
+
+## ✨ New Features
+- [`9dee9e9`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/9dee9e9)   Add dynamic routes for generation 
+
+
+
+# [1.2.0-beta.6](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.5...v1.2.0-beta.6) (2021-03-23)
+
 # [v1.2.0-beta.5](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2021-03-23)
 
 ## 🐛 Bug Fixes
