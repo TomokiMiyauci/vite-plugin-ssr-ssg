@@ -5,7 +5,7 @@ import { CYAN, GREEN, RESET, GRAY } from './constants'
 import { Render, PluginOptions } from './types'
 import { ResolvedConfig } from 'vite'
 
-type Options = ResolvedConfig & Partial<{ ssrgOptions: PluginOptions }>
+type Options = ResolvedConfig & Partial<{ ssrgOptions: Partial<PluginOptions> }>
 const run = async (options?: Options) => {
   const { default: render } = require(toRootAbsolute(
     options?.build?.outDir ?? 'dist',

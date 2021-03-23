@@ -7,7 +7,8 @@ import { PluginOptions } from './types'
 
 import { join } from 'path'
 
-type SSROptions = ResolvedConfig & Partial<{ ssrgOptions: PluginOptions }>
+type SSROptions = ResolvedConfig &
+  Partial<{ ssrgOptions: Partial<PluginOptions> }>
 type SSGOptions = SSROptions
 
 const runSSG = async (options?: SSGOptions): Promise<void> => {
@@ -19,7 +20,7 @@ const runSSG = async (options?: SSGOptions): Promise<void> => {
   rmSync(
     join(
       options?.build?.outDir ?? 'dist',
-      options?.ssrgOptions?.build.outDirServer ?? 'server'
+      options?.ssrgOptions?.build?.outDirServer ?? 'server'
     ),
     {
       recursive: true,
