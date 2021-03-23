@@ -13,8 +13,10 @@ interface BuildOptions {
   outDirServer: string
 }
 
+export type RoutesOption = string[] | (() => Promise<string[]>)
+
 interface GenerateOptions {
-  routes: string[]
+  routes: RoutesOption
 }
 
 export interface PluginOptions {

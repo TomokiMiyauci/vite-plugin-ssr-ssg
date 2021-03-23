@@ -8,12 +8,20 @@ import {
 } from './utils'
 import { join } from 'path'
 import { CYAN, GREEN, RESET } from './constants'
-import { Render, PluginOptions } from './types'
+import { Render, PluginOptions, RoutesOption } from './types'
 import { ResolvedConfig } from 'vite'
 import { outputFileSync, readFileSync } from 'fs-extra'
 import consola from 'consola'
 
 const failRenderPlaceholder = ['<!---->']
+
+const getRoutes = async (routes: RoutesOption): Promise<string[]> => {
+  if (Array.isArray(routes)) {
+    return routes
+  } else {
+    return await routes()
+  }
+}
 
 type Options = ResolvedConfig & Partial<{ ssrgOptions: Partial<PluginOptions> }>
 const run = async (options?: Options) => {
@@ -32,7 +40,7 @@ const run = async (options?: Options) => {
   const _pages = getRoutePaths()
   const pages: string[] = removeDuplicate([
     ..._pages,
-    ...(options?.ssrgOptions?.generate?.routes || [])
+    ...(await getRoutes(options?.ssrgOptions?.generate?.routes || []))
       .map(addStartSlash)
       .map(removeEndSlash)
   ])
