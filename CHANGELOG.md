@@ -1,3 +1,12 @@
+# [v1.2.0-beta.7](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.6...v1.2.0-beta.7) (2021-03-23)
+
+## ✨ New Features
+- [`5bf57e4`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/5bf57e4)   Accept async function to generate routes option 
+
+
+
+# [1.2.0-beta.7](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.6...v1.2.0-beta.7) (2021-03-23)
+
 # [v1.2.0-beta.6](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.5...v1.2.0-beta.6) (2021-03-23)
 
 ## ✨ New Features
