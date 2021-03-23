@@ -8,7 +8,7 @@
   "bin": {
     "vite-ssrg": "dist/bin.js"
   },
-  "version": "1.2.0-beta.4",
+  "version": "1.2.0-beta.5",
   "license": "MIT",
   "repository": "https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg",
   "bugs": {
