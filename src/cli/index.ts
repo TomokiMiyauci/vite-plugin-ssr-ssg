@@ -39,9 +39,8 @@ yargs(hideBin(process.argv))
         describe: 'server side outputs directory',
         default: undefined
       }),
-    async ({ outDirClient, outDirServer }) => {
+    async () => {
       const config = await resolveConfig({}, 'build')
-      console.log(outDirClient, outDirServer, config)
       config.build.ssrManifest = true
 
       return runSSR(config)
@@ -58,8 +57,7 @@ yargs(hideBin(process.argv))
         describe: 'server side outputs directory',
         default: undefined
       }),
-    async ({ outDirClient, outDirServer }) => {
-      console.log(outDirClient, outDirServer)
+    async () => {
       const config = await resolveConfig({}, 'build')
       return runSSG(config)
     }

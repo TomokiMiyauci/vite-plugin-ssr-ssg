@@ -12,8 +12,17 @@ type SSROptions = ResolvedConfig &
 type SSGOptions = SSROptions
 
 const runSSG = async (options?: SSGOptions): Promise<void> => {
-  if (options?.ssrgOptions && options.ssrgOptions.build) {
-    options.ssrgOptions.build.outDirClient = ''
+  if (options && !options?.ssrgOptions?.build?.outDirClient) {
+    options = {
+      ...options,
+      ssrgOptions: {
+        ...options.ssrgOptions,
+        build: {
+          ...options.ssrgOptions?.build,
+          outDirClient: ''
+        }
+      }
+    }
   }
   await runSSR(options)
   await prerenderRun(options)
