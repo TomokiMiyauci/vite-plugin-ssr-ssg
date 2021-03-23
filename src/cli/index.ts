@@ -42,9 +42,8 @@ yargs(hideBin(process.argv))
     async ({ outDirClient, outDirServer }) => {
       const config = await resolveConfig({}, 'build')
       console.log(outDirClient, outDirServer, config)
+      config.build.ssrManifest = true
 
-      // const build = {...config.build, ssrManifest: true  }
-      // config.build = build
       return runSSR(config)
     }
   )
