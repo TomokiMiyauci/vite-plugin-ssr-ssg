@@ -32,10 +32,10 @@ export default About
 const appTSX = (isTS: boolean): string => `${
   isTS ? "import { FunctionComponent } from 'preact'\n" : ''
 }import { Link, Router } from 'preact-router'
-import { getRoutes } from 'vite-plugin-ssr-ssg/preact'
+import { getRoutes } from 'vite-plugin-ssr-ssg'
 
 const pages = import.meta.globEager('./pages/*.${isTS ? 'tsx' : 'jsx'}')
-const routes = getRoutes(pages)
+const routes = getRoutes${isTS ? "<'preact'>" : ''}(pages)
 
 export const App${
   isTS ? ': FunctionComponent<{ url?: string }>' : ''

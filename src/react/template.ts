@@ -73,10 +73,10 @@ const appTSX = (isTS: boolean): string => `import React${
 } from 'react'
 import './App.css'
 import { Route, Switch, Link } from 'react-router-dom'
-import { getRoutes } from 'vite-plugin-ssr-ssg/react'
+import { getRoutes } from 'vite-plugin-ssr-ssg'
 
 const pages = import.meta.globEager('./pages/*.${isTS ? 'tsx' : 'jsx'}')
-const routes = getRoutes(pages)
+const routes = getRoutes${isTS ? "<'react'>" : ''}(pages)
 
 const App${isTS ? ': FC' : ''} = () => {
   return (
