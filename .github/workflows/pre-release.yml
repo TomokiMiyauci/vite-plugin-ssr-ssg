@@ -65,7 +65,11 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: dist
-          path: dist
+          path: |
+            dist
+            preact
+            react
+            vue3
 
   test:
     needs: [setup]
@@ -120,7 +124,6 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: dist
-          path: dist
 
       - name: release
         run: yarn semantic-release
