@@ -1,3 +1,12 @@
+# [v1.2.0-beta.9](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.8...v1.2.0-beta.9) (2021-03-23)
+
+## ✨ New Features
+- [`eb2398d`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/eb2398d)  (preact) Add dynamic route parser for preact 
+
+
+
+# [1.2.0-beta.9](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.8...v1.2.0-beta.9) (2021-03-23)
+
 # [v1.2.0-beta.8](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.7...v1.2.0-beta.8) (2021-03-23)
 
 ## ✨ New Features
