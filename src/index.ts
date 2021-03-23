@@ -1,6 +1,7 @@
 import { Plugin } from 'vite'
 import { NAME } from './constants'
 export type { Render as ServerRenderer } from './types'
+export { getRoutes } from './routes'
 import type { PluginOptions } from './types'
 
 declare module 'vite' {

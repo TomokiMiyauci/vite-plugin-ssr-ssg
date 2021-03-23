@@ -3,7 +3,7 @@ import { loadConfigFromFile } from 'vite'
 import { generateFiles } from './vue3'
 import { generateFiles as genPraectTemplate } from './preact'
 import { generateFiles as genReactTemplate } from './react'
-import { RESET, CYAN, GREEN } from './constants'
+import { RESET, CYAN, GREEN, FRAMEWORKS } from './constants'
 
 const scriptsLog = `${CYAN}Add Scripts: ${RESET}-> ${GREEN}package.json${RESET}
 ${GREEN}dev${RESET}: vite-ssrg dev
@@ -12,9 +12,7 @@ ${GREEN}generate${RESET}: vite-ssrg generate
 ${GREEN}serve${RESET}: vite-ssrg preview
 `
 
-const frameworks = ['react', 'preact', 'vue', 'svelte', 'vanilla'] as const
-const frameworksWithExt = frameworks
-  .filter((name) => name !== 'vanilla')
+const frameworksWithExt = FRAMEWORKS.filter((name) => name !== 'vanilla')
   .map((name) => [name, `${name}JS`, `${name}TS`] as const)
   .flat()
 
