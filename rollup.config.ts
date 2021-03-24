@@ -33,7 +33,8 @@ const config = [
       'compression',
       'serve-static',
       'fs-extra',
-      'consola'
+      'consola',
+      'recursive-readdir'
     ],
 
     plugins: [
@@ -59,7 +60,7 @@ const config = [
     watch: {
       include: 'src/**'
     },
-    external: ['fs', 'path'],
+    external: ['fs', 'path', 'recursive-readdir'],
 
     plugins: [typescript({ useTsconfigDeclarationDir: false })]
   },

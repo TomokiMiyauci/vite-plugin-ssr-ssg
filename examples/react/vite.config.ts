@@ -8,7 +8,7 @@ export default defineConfig({
     reactRefresh(),
     ssrgPlugin({
       generate: {
-        routes: ['/1']
+        routes: ['/users/1']
       }
     })
   ]

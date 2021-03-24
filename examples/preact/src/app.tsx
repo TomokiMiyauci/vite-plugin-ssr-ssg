@@ -2,7 +2,7 @@ import { FunctionComponent } from 'preact'
 import { Link, Router } from 'preact-router'
 import { getRoutes } from 'vite-plugin-ssr-ssg'
 
-const pages = import.meta.globEager('./pages/*.tsx')
+const pages = import.meta.globEager('./pages/**/*.tsx')
 const routes = getRoutes<'preact'>(pages)
 
 export const App: FunctionComponent<{ url?: string }> = ({ url }) => {

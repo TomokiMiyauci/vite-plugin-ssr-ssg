@@ -4,7 +4,8 @@ import {
   addStartSlash,
   endWithSlash,
   removeEndSlash,
-  removeDuplicate
+  removeDuplicate,
+  path2Absolute
 } from '../../src/utils'
 
 describe('toIndexHTML', () => {
@@ -86,5 +87,21 @@ describe('removeDuplicate', () => {
   ] as const
   it.each(table)('removeDuplicate %d', (val, expected) => {
     expect(removeDuplicate(val)).toEqual(expected)
+  })
+})
+
+describe('path2Absolute', () => {
+  const table = [
+    ['./pages/index.vue', 'index.vue'],
+    ['ages/index.vue', 'ages/index.vue'],
+    ['/ages/index.vue', '/ages/index.vue'],
+    ['/pages/index.vue', 'index.vue'],
+    ['./pages/about/index.vue', 'about/index.vue'],
+    ['./pages/hoge/about/index.vue', 'hoge/about/index.vue'],
+    ['./pages/pages/about/index.vue', 'pages/about/index.vue'],
+    ['./pages/hoge/pages/about/index.vue', 'hoge/pages/about/index.vue']
+  ] as const
+  it.each(table)('path2Absolute(%s): %s', (pattern, result) => {
+    expect(path2Absolute(pattern, 'pages')).toBe(result)
   })
 })

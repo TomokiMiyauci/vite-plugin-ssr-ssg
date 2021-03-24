@@ -74,12 +74,13 @@ Instead of reducing the level of abstraction, provide a script that makes it eas
 
 > Next channel is beta.
 
-- Head tag preload in development environment
-- Page Async Loading
-- Overall Unit test
-- Support for the same CLI as Vite
-- Dynamic route support via plugin config
-- Svelte support
+- [x] Auto detect dynamic routes and nested routes
+- [x] Dynamic route generation via plugin config
+- [ ] Head tag preload in development environment
+- [ ] Page Async Loading
+- [ ] Overall Unit test
+- [ ] Support for the same CLI as Vite
+- [ ] Svelte support
 
 ## 💚 Thanks
 

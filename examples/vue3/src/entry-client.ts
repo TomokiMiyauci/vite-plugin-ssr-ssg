@@ -9,7 +9,7 @@ import {
 import { getRoutes } from 'vite-plugin-ssr-ssg'
 import { createHead, HeadClient } from '@vueuse/head'
 
-const pages = import.meta.globEager('./pages/*.vue')
+const pages = import.meta.globEager('./pages/**/*.vue')
 const routes = getRoutes<'vue'>(pages)
 
 export const createApp = (): {
