@@ -33,7 +33,6 @@ const getRoutePaths = async (): Promise<string[]> => {
   const routePaths = pageFileNames
     .filter((page) => extensions.test(page) && !bracketRegex.test(page))
     .map((page) => getPath(page))
-  console.log(routePaths)
   return routePaths
 }
 

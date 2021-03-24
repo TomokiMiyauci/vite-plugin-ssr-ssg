@@ -60,11 +60,11 @@ const rewriteAppVue = (path: string) => () => {
 }
 
 const generatePages = (basePath: string, isTS: boolean) => () => {
-  writeFileSync(join(basePath, 'Index.vue'), indexVue(isTS), {
+  writeFileSync(join(basePath, 'index.vue'), indexVue(isTS), {
     encoding: 'utf-8',
     flag: 'w'
   })
-  writeFileSync(join(basePath, 'About.vue'), aboutVue(isTS), {
+  writeFileSync(join(basePath, 'about.vue'), aboutVue(isTS), {
     encoding: 'utf-8',
     flag: 'w'
   })
