@@ -3,8 +3,14 @@ import { ComponentType as PreactComponentType } from 'preact'
 import { FRAMEWORKS } from './constants'
 import { RouteComponent, RouteRecordRaw } from 'vue-router'
 import { ComponentType as ReactComponentType } from 'react'
-
+import { removeEndSlash, path2Absolute } from './utils'
 const bracketRegex = /\[.+\]\..+$/
+
+const join = (...parts: string[]): string => {
+  const separator = '/'
+  const replace = new RegExp(`${separator}{1,}`, 'g')
+  return removeEndSlash(parts.join(separator).replace(replace, separator))
+}
 
 type Framework = Exclude<typeof FRAMEWORKS[number], 'svelte' | 'vanilla'>
 type Component<T extends Framework> = T extends 'vue'
@@ -29,26 +35,30 @@ type RouteOptions = {
   baseDirs: string | string[]
 }
 
+const index2EmptyString = (val: string): string => (val === 'index' ? '' : val)
+
 const path2RouteObject = (
   path: string
 ): {
   name: string
   path: string
 } => {
-  const fileName = path.split('/').slice(-1)[0]
-  const isDynamicPath = bracketRegex.test(fileName)
-  const name = isDynamicPath
-    ? fileName.split('.')[0].replace(/\[/, '').replace(/\]/, '')
-    : fileName.split('.')[0]
-  const _path = isDynamicPath
-    ? `/:${name}`
-    : name.toLowerCase() === 'index'
-    ? '/'
-    : `/${name?.toLowerCase()}`
+  const absoluteFilePath = path2Absolute(path, 'pages')
+  const splittedFilePath = absoluteFilePath.split('/')
+  const fileNameWithExt = splittedFilePath.slice(-1)[0]
+  const fileName = index2EmptyString(fileNameWithExt.split('.')[0])
+  const filePath = splittedFilePath.slice(0, -1)
+  const isDynamicPath = bracketRegex.test(fileNameWithExt)
+  const formattedFileName = isDynamicPath
+    ? fileName.replace(/\[/, '').replace(/\]/, '')
+    : fileName
+  const _path = isDynamicPath ? `:${formattedFileName}` : formattedFileName
 
   return {
-    name,
-    path: _path
+    name:
+      [...filePath, formattedFileName].filter((val) => !!val).join('-') ||
+      'index',
+    path: join('/', ...filePath, _path)
   }
 }
 
@@ -93,4 +103,4 @@ const getRoutes = <T extends Framework>(
 //   }
 // }
 
-export { getRoutes }
+export { getRoutes, path2RouteObject, bracketRegex }

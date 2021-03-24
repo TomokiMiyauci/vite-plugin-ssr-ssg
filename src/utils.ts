@@ -1,17 +1,24 @@
-import { resolve } from 'path'
-import { readdirSync } from 'fs'
 import { PIPED_EXTENSIONS } from './constants'
 import { bracketRegex } from './vue3/routes'
-import { basename, dirname, join } from 'path'
+import { resolve, basename, dirname, join } from 'path'
+import recursive from 'recursive-readdir'
 
 const toRootAbsolute = (...path: string[]): string =>
   resolve(process.env.PWD || '', ...path)
 
 const extensions = new RegExp(`.(${PIPED_EXTENSIONS})$`)
 
+const path2Absolute = (path: string, baseDir: string): string => {
+  const matched = path.match(new RegExp(`${baseDir}/(.+)`))
+  if (!matched || !matched[1]) {
+    return path
+  }
+  return matched[1]
+}
+
 const getPath = (fileName: string): string => {
-  const name = fileName.replace(extensions, '').toLowerCase()
-  return name === 'index' ? '/' : `/${name}`
+  const name = fileName.replace(extensions, '').replace('index', '')
+  return removeEndSlash(join('/', name))
 }
 
 const getExtension = (isTS: boolean, x?: boolean): string => {
@@ -19,11 +26,14 @@ const getExtension = (isTS: boolean, x?: boolean): string => {
   return isTS ? `.ts${_x}` : `.js${_x}`
 }
 
-const getRoutePaths = (): string[] => {
-  const pageFileNames = readdirSync(toRootAbsolute('src', 'pages'))
+const getRoutePaths = async (): Promise<string[]> => {
+  const pageFileNames = await (
+    await recursive(toRootAbsolute('src', 'pages'))
+  ).map((path) => path2Absolute(path, 'pages'))
   const routePaths = pageFileNames
     .filter((page) => extensions.test(page) && !bracketRegex.test(page))
     .map((page) => getPath(page))
+  console.log(routePaths)
   return routePaths
 }
 
@@ -97,5 +107,6 @@ export {
   addStartSlash,
   endWithSlash,
   removeEndSlash,
-  removeDuplicate
+  removeDuplicate,
+  path2Absolute
 }

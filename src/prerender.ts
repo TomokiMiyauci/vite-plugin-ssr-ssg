@@ -37,7 +37,7 @@ const run = async (options?: Options) => {
     'utf-8'
   )
 
-  const _pages = getRoutePaths()
+  const _pages = await getRoutePaths()
   const pages: string[] = removeDuplicate([
     ..._pages,
     ...(await getRoutes(options?.ssrgOptions?.generate?.routes || []))
