@@ -1,18 +1,24 @@
 # [v1.3.0-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.1-beta.1...v1.3.0-beta.1) (2021-03-24)
 
 ## ✨ New Features
-- [`48babbd`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/48babbd)   Deal good with nested routes 
 
-
+- [`48babbd`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/48babbd)   Deal good with nested routes
 
 # [1.3.0-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.1-beta.1...v1.3.0-beta.1) (2021-03-24)
+
+# [v1.2.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0...v1.2.1) (2021-03-24)
+
+## 🐛 Bug Fixes
+
+- [`f263075`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f263075)  (react) Fix template for package.json
+
+## [1.2.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0...v1.2.1) (2021-03-24)
 
 # [v1.2.1-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0...v1.2.1-beta.1) (2021-03-24)
 
 ## 🐛 Bug Fixes
-- [`f263075`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f263075)  (react) Fix template for package.json 
 
-
+- [`f263075`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f263075)  (react) Fix template for package.json
 
 ## [1.2.1-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0...v1.2.1-beta.1) (2021-03-24)
 
