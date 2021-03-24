@@ -1,3 +1,12 @@
+# [v1.2.0-beta.11](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.10...v1.2.0-beta.11) (2021-03-24)
+
+## 🐛 Bug Fixes
+- [`f263075`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f263075)  (react) Fix template for package.json 
+
+
+
+# [1.2.0-beta.11](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.10...v1.2.0-beta.11) (2021-03-24)
+
 # [v1.2.0-beta.10](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.0-beta.9...v1.2.0-beta.10) (2021-03-23)
 
 ## ✨ New Features
