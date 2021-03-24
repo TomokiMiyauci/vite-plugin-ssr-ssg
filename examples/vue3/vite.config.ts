@@ -9,7 +9,7 @@ export default defineConfig({
     plugin({
       generate: {
         routes: async () => {
-          return ['/1']
+          return ['/users/1']
         }
       }
     })

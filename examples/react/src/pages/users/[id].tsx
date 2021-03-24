@@ -9,7 +9,7 @@ export default () => {
     <>
       <div>{id}</div>
 
-      <Title>{id}</Title>
+      <Title>{id} | User</Title>
     </>
   )
 }
