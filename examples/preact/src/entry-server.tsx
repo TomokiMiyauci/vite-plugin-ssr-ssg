@@ -1,15 +1,10 @@
 import { App } from './app'
 import renderToString from 'preact-render-to-string'
-import { createElement } from 'preact'
-import { ServerRenderer } from 'vite-plugin-ssr-ssg/preact'
+import { ServerRenderer } from 'vite-plugin-ssr-ssg'
 
-const render: ServerRenderer = async (
-  url,
-  context
-): Promise<ReturnType<typeof renderToString>> => {
-  const app = createElement(App, { url })
-
-  return renderToString(app)
+const render: ServerRenderer = async (url, manifest) => {
+  const bodyTags = renderToString(<App url={url} />)
+  return { bodyTags }
 }
 
 export default render

@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 import './App.css'
 import { Route, Switch, Link } from 'react-router-dom'
-import { getRoutes } from 'vite-plugin-ssr-ssg/react'
+import { getRoutes } from 'vite-plugin-ssr-ssg'
 
 const pages = import.meta.globEager('./pages/*.tsx')
-const routes = getRoutes(pages)
+const routes = getRoutes<'react'>(pages)
 
 const App: FC = () => {
   return (

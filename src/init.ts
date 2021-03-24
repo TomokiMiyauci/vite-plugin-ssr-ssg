@@ -147,8 +147,8 @@ const getDependency = ({
 }: FrameworkMap): Record<string, string> => {
   if (react) {
     return {
-      'react-dom': '^17.0.0',
-      'react-head': '^3.4.0'
+      'react-head': '^3.4.0',
+      'react-router-dom': '^5.2.0'
     }
   } else if (preact) {
     return {
