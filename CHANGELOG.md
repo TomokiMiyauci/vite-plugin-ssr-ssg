@@ -1,3 +1,15 @@
+# [v1.4.0](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.3.1...v1.4.0) (2021-03-25)
+
+## ✨ New Features
+- [`f2a7e20`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f2a7e20)   Change rollup config and output 
+
+## 🐛 Bug Fixes
+- [`f8b1c68`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f8b1c68)  (preact) Change import path 
+
+
+
+# [1.4.0](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.3.1...v1.4.0) (2021-03-25)
+
 # [v1.4.0-beta.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.4.0-beta.1...v1.4.0-beta.2) (2021-03-25)
 
 ## 🐛 Bug Fixes
