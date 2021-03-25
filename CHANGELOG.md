@@ -1,3 +1,13 @@
+# [v1.3.1-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.3.0...v1.3.1-beta.1) (2021-03-25)
+
+## 🔒 Security Issues
+- [`f50d235`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f50d235)   Add security.md 
+- [`1dc6b19`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/1dc6b19)   Add google SEO site verification 
+
+
+
+## [1.3.1-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.3.0...v1.3.1-beta.1) (2021-03-25)
+
 # [v1.3.0](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.2.1...v1.3.0) (2021-03-24)
 
 ## ✨ New Features
