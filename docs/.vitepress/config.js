@@ -28,7 +28,7 @@ const baseHead = [
       content: `${title} docs`
     }
   ],
-  ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+  ['meta', { name: 'twitter:card', content: 'summary' }],
   ['meta', { name: 'twitter:site', content: '@tomoki_miyauci' }]
 ]
 module.exports = {
