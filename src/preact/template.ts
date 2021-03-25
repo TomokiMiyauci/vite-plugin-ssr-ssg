@@ -8,7 +8,7 @@ hydrate(<App />, document.getElementById('app')${isTS ? '!' : ''})
 const entryServer = (isTS: boolean): string => `import { App } from './app'
 import renderToString from 'preact-render-to-string'
 import { createElement } from 'preact'
-${isTS ? "import { ServerRenderer } from 'vite-plugin-ssr-ssg/preact'\n" : ''}
+${isTS ? "import { ServerRenderer } from 'vite-plugin-ssr-ssg'\n" : ''}
 const render${isTS ? ': ServerRenderer' : ''} = async (
   url,
   context
