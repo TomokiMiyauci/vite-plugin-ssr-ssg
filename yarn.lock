@@ -2248,7 +2248,7 @@ cacache@^12.0.0, cacache@^12.0.2, cacache@^12.0.3:
     move-concurrently "^1.0.1"
     promise-inflight "^1.0.1"
     rimraf "^2.6.3"
-    ssri "^6.0.1"
+    ssri "^8.0.1"
     unique-filename "^1.1.1"
     y18n "^4.0.0"
 
@@ -3436,9 +3436,9 @@ esbuild@^0.9.3:
   integrity sha512-G8k0olucZp3LJ7I/p8y388t+IEyb2Y78nHrLeIxuqZqh6TYqDYP/B/7drAvYKfh83CGwKal9txVP+FTypsPJug==
 
 esbuild@^0.9.6:
-  version "0.9.6"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.9.6.tgz#2cae519e7ce2328ecf57ae738090d07ce7245850"
-  integrity sha512-F6vASxU0wT/Davt9aj2qtDwDNSkQxh9VbyO56M7PDWD+D/Vgq/rmUDGDQo7te76W5auauVojjnQr/wTu3vpaUA==
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.9.7.tgz#ea0d639cbe4b88ec25fbed4d6ff00c8d788ef70b"
+  integrity sha512-VtUf6aQ89VTmMLKrWHYG50uByMF4JQlVysb8dmg6cOgW8JnFCipmz7p+HNBl+RR3LLCuBxFGVauAe2wfnF9bLg==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -6019,7 +6019,7 @@ libnpmpublish@^1.1.2:
     npm-package-arg "^6.1.0"
     npm-registry-fetch "^4.0.0"
     semver "^5.5.1"
-    ssri "^6.0.1"
+    ssri "^8.0.1"
 
 libnpmsearch@^2.0.2:
   version "2.0.2"
@@ -6337,7 +6337,7 @@ make-fetch-happen@^5.0.0:
     node-fetch-npm "^2.0.2"
     promise-retry "^1.1.1"
     socks-proxy-agent "^4.0.0"
-    ssri "^6.0.0"
+    ssri "^8.0.1"
 
 makeerror@1.0.x:
   version "1.0.11"
@@ -7066,7 +7066,7 @@ npm@^6.14.9:
     slide "~1.1.6"
     sorted-object "~2.0.1"
     sorted-union-stream "~2.1.3"
-    ssri "^6.0.1"
+    ssri "^8.0.1"
     stringify-package "^1.0.1"
     tar "^4.4.13"
     text-table "~0.2.0"
@@ -7416,7 +7416,7 @@ pacote@^9.1.0, pacote@^9.5.12, pacote@^9.5.3:
     rimraf "^2.6.2"
     safe-buffer "^5.1.2"
     semver "^5.6.0"
-    ssri "^6.0.1"
+    ssri "^8.0.1"
     tar "^4.4.10"
     unique-filename "^1.1.1"
     which "^1.3.1"
@@ -8379,9 +8379,9 @@ rollup@^2.38.5:
     fsevents "~2.3.1"
 
 rollup@^2.41.2:
-  version "2.42.3"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.42.3.tgz#7935d7bc8687faa5743432e207d761aa31fe6fee"
-  integrity sha512-JjaT9WaUS5vmjy6xUrnPOskjkQg2cN4WSACNCwbOvBz8VDmbiKVdmTFUoMPRqTud0tsex8Xy9/boLbDW9HKD1w==
+  version "2.42.4"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.42.4.tgz#97c910a48bd0db6aaa4271dd48745870cbbbf970"
+  integrity sha512-Zqv3EvNfcllBHyyEUM754npqsZw82VIjK34cDQMwrQ1d6aqxzeYu5yFb7smGkPU4C1Bj7HupIMeT6WU7uIdnMw==
   optionalDependencies:
     fsevents "~2.3.1"
 
@@ -8924,8 +8924,8 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
-ssri@^6.0.0, ssri@^6.0.1:
-  version "6.0.1"
+ssri@^8.0.1:
+  version "8.0.1"
   resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
   integrity sha512-3Wge10hNcT1Kur4PDFwEieXSCMCJs/7WvSACcrMYrNp+b8kDL1/0wJch5Ni2WrtwEa2IO8OsVfeKIciKCDx/QA==
   dependencies:
