@@ -20,7 +20,10 @@
     "build": "rollup -c rollup.config.ts",
     "test": "jest",
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
@@ -71,6 +74,7 @@
     "typescript": "^4.2.3",
     "vite": "^2.0.5",
     "vite-plugin-ssr-ssg": "1.2.0-beta.3",
+    "vitepress": "^0.12.2",
     "vue-router": "^4.0.5",
     "yargs": "^16.2.0"
   },

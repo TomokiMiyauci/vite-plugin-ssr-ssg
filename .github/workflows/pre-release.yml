@@ -6,6 +6,7 @@ on:
       - beta
     paths-ignore:
       - examples/**
+      - docs/**
 
 jobs:
   setup:
