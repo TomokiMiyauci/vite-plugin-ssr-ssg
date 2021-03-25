@@ -3,14 +3,9 @@ import { ComponentType as PreactComponentType } from 'preact'
 import { FRAMEWORKS } from './constants'
 import { RouteComponent, RouteRecordRaw } from 'vue-router'
 import { ComponentType as ReactComponentType } from 'react'
-import { removeEndSlash, path2Absolute } from './utils'
+import { path2Absolute } from './utils'
+import { join } from 'path'
 const bracketRegex = /\[.+\]\..+$/
-
-const join = (...parts: string[]): string => {
-  const separator = '/'
-  const replace = new RegExp(`${separator}{1,}`, 'g')
-  return removeEndSlash(parts.join(separator).replace(replace, separator))
-}
 
 type Framework = Exclude<typeof FRAMEWORKS[number], 'svelte' | 'vanilla'>
 type Component<T extends Framework> = T extends 'vue'
