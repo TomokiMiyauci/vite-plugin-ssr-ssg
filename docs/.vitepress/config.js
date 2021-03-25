@@ -6,7 +6,7 @@ const baseHead = [
   ['meta', { name: 'author', content: 'TomokiMiyauci' }],
   ['meta', { name: 'copyright', content: '2021 ©TomokiMiyauci' }],
   ['meta', { property: 'og:title', content: title }],
-  ['meta', { property: 'og:image', content: `${baseUrl}/icon.png` }],
+  ['meta', { property: 'og:image', content: `${baseUrl}/logo.png` }],
   [
     'meta',
     {
@@ -28,7 +28,7 @@ const baseHead = [
       content: `${title} docs`
     }
   ],
-  ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+  ['meta', { name: 'twitter:card', content: 'summary' }],
   ['meta', { name: 'twitter:site', content: '@tomoki_miyauci' }]
 ]
 module.exports = {
