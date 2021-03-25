@@ -1,3 +1,12 @@
+# [v1.4.0-beta.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.4.0-beta.1...v1.4.0-beta.2) (2021-03-25)
+
+## 🐛 Bug Fixes
+- [`f8b1c68`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/f8b1c68)  (preact) Change import path 
+
+
+
+# [1.4.0-beta.2](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.4.0-beta.1...v1.4.0-beta.2) (2021-03-25)
+
 # [v1.3.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.3.0...v1.3.1) (2021-03-25)
 
 ## 🔒 Security Issues
