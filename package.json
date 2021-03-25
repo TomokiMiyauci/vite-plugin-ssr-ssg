@@ -97,5 +97,9 @@
     "vue",
     "react",
     "preact"
-  ]
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/tomoki_miyauci"
+  }
 }
