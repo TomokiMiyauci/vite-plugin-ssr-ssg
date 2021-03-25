@@ -1,7 +1,7 @@
 import { PIPED_EXTENSIONS } from './constants'
-import { bracketRegex } from './vue3/routes'
 import { resolve, basename, dirname, join } from 'path'
 import recursive from 'recursive-readdir'
+import { bracketRegex } from './regex'
 
 const toRootAbsolute = (...path: string[]): string =>
   resolve(process.env.PWD || '', ...path)

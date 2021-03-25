@@ -5,7 +5,7 @@ import { RouteComponent, RouteRecordRaw } from 'vue-router'
 import { ComponentType as ReactComponentType } from 'react'
 import { path2Absolute } from './utils'
 import { join } from 'path'
-const bracketRegex = /\[.+\]\..+$/
+import { bracketRegex } from './regex'
 
 type Framework = Exclude<typeof FRAMEWORKS[number], 'svelte' | 'vanilla'>
 type Component<T extends Framework> = T extends 'vue'
@@ -84,18 +84,5 @@ const getRoutes = <T extends Framework>(
     } as any
   })
 }
-
-// const getComponentKey = (framework: Framework): 'Component' | 'component' => {
-//   switch (framework) {
-//     case 'vue': {
-//       return 'component'
-//     }
-
-//     case 'react':
-//     case 'preact': {
-//       return 'Component'
-//     }
-//   }
-// }
 
 export { getRoutes, path2RouteObject, bracketRegex }
