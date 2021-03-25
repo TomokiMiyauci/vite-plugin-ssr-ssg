@@ -1,3 +1,12 @@
+# [v1.4.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.4.0...v1.4.1) (2021-03-25)
+
+## 🐛 Bug Fixes
+- [`841c48e`](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/commit/841c48e)   Move dependencies 
+
+
+
+## [1.4.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.4.0...v1.4.1) (2021-03-25)
+
 # [v1.4.1-beta.1](https://github.com/TomokiMiyauci/vite-plugin-ssr-ssg/compare/v1.4.0...v1.4.1-beta.1) (2021-03-25)
 
 ## 🐛 Bug Fixes
