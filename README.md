@@ -22,11 +22,9 @@
 - Automatic page generation
 - Preview in SSR and CSR
 
-The best feature is that it requires a declarative entry point, but it is easy to introduce (1 command).
-This means that you can easily see what's happening and extend it, so you can incorporate it into your project and
-understand how SSR and SSG are done.
+[📝 Read the Docs to Learn More.](https://vite-plugin-ssr-ssg.web.app/)
 
-## 💫 Usage
+## 💫 Quick start
 
 In your vite project
 
@@ -34,24 +32,6 @@ In your vite project
 yarn add -D vite-plugin-ssr-ssg
 yarn vite-ssrg init
 ```
-
-This alone creates an environment for SSR and SSG. The framework and TS or JS are automatically detected.
-
-Refer to [examples](./examples) for manual setup.
-
-## 🛠️ Commands
-
-`vite-ssrg [command]`
-
-| Command  | Description                                       |
-| -------- | ------------------------------------------------- |
-| init     | Setup SSR and SSG development environment         |
-| dev      | Setup SSR develop server                          |
-| build    | Output client side code and server side code      |
-| generate | Output pre-rendered client side code              |
-| preview  | Setup node server for builded or generated output |
-
-Maybe, JavaScript API will also be provided.
 
 ## ☘️ Support
 
@@ -63,17 +43,6 @@ The support status of the framework is as follows.
 - [ ] Svelte
 - [ ] lit-element
 - [ ] vanilla
-
-## ❓Why
-
-It all started when I wanted to use `vite` to create a static site such as a blog. The overwhelming speed that static site generators haven't had has made me irreversible to other tools.
-
-There are few tools for doing SSR and SSG with Vite. However, in most cases, it provides only wrapper functions and commands and is so abstract that you don't know what's going on inside. This is good for achieving a particular purpose, but it's confusing to customize and feels a bit overkill.
-
-On the other hand, in this project aim for a simpler and easier-to-understand structure.
-
-Client-side and server-side entry points are not intentionally hidden and are forced to declare. This is due to the fact that common parts are not yet been found between frameworks to support cross-framework. Of course, the entry point can be overridden and aim to make it nonexistent by default.
-Instead of reducing the level of abstraction, provide a script that makes it easy to set up your project with `vite-ssrg init`.
 
 ## ✅ Todo
 
