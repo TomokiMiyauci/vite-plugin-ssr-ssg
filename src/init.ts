@@ -1,5 +1,5 @@
 import { writeFileSync } from 'fs'
-import { loadConfigFromFile } from 'vite'
+import { loadConfigFromFile, PluginOption } from 'vite'
 import { generateFiles } from './vue3'
 import { generateFiles as genPraectTemplate } from './preact'
 import { generateFiles as genReactTemplate } from './react'
@@ -45,12 +45,15 @@ const rewritePackageJson = async (path: string): Promise<void> => {
       mode: ''
     })) ?? {}
 
+  const getPluginName = (pluginOption: PluginOption): string =>
+    pluginOption ? pluginOption.name : ''
+
   const pluginNames = userConfig?.plugins
     ?.map((plugin) => {
       if (Array.isArray(plugin)) {
-        return plugin.map(({ name }) => name)
+        return plugin.map(getPluginName)
       } else {
-        return plugin.name
+        return getPluginName(plugin)
       }
     })
     .flat()
