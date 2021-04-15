@@ -3519,10 +3519,10 @@ esbuild-register@^2.2.0:
   dependencies:
     jsonc-parser "^3.0.0"
 
-esbuild@^0.10.0:
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.10.2.tgz#caa65a8f3096d547d89159918039df6c5c6c90be"
-  integrity sha512-/5vsZD7wTJJHC3yNXLUjXNvUDwqwNoIMvFvLd9tcDQ9el5l13pspYm3yufavjIeYvNtAbo+6N/6uoWx9dGA6ug==
+esbuild@^0.11.11:
+  version "0.11.11"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.11.tgz#8f235e0a1a34253a47fd80d51f12084dd98074bd"
+  integrity sha512-iq5YdV63vY/nUAFIvY92BXVkYjMbOchnofLKoLKMPZIa4uuIJAJG9WRA+ZRjQBZbrsORUwvZcANeG2d3p46PJQ==
 
 esbuild@^0.9.2, esbuild@^0.9.3:
   version "0.9.7"
