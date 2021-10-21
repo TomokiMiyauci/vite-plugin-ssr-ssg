@@ -14,8 +14,8 @@
 
 > Vite plugin for SSR and SSG in cross framework
 
-:rotating_light: It has not been fully tested and should not be used in production.  
-A better alternative is [vite-plugin-ssr](https://github.com/brillout/vite-plugin-ssr).
+**:rotating_light: It has not been fully tested and should not be used in production.  
+A better alternative is [vite-plugin-ssr](https://github.com/brillout/vite-plugin-ssr).**
 
 ## ✨ Feature
 
